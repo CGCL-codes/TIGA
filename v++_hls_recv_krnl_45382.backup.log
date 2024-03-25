@@ -1,0 +1,23 @@
+WARNING: [v++ 60-1495] Deprecated parameter found: compiler.userPostSysLinkTcl. Please use this replacement parameter instead: compiler.userPostDebugProfileOverlayTcl
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl
+	Log files: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/logs/hls_recv_krnl
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+INFO: [v++ 60-1548] Creating build summary session with primary output /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo.compile_summary, at Sun Dec 11 14:45:47 2022
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Dec 11 14:45:47 2022
+INFO: [v++ 60-1315] Creating rulecheck session with output '/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl/v++_compile_hls_recv_krnl_guidance.html', at Sun Dec 11 14:45:49 2022
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/hw/hw.xsa'
+INFO: [v++ 74-74] Compiler Version string: 2020.2
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_gen3x16_xdma_3_1_202020_1
+INFO: [v++ 60-242] Creating kernel: 'hls_recv_krnl'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 200 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: hls_recv_krnl Log file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/vitis_hls.log :
+ERROR: [v++ 214-124] use of undeclared identifier 'timestamp0': /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp:419
+ERROR: [v++ 60-300] Failed to build kernel(ip) hls_recv_krnl, see log for details: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/vitis_hls.log
+ERROR: [v++ 60-773] In '/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-124] use of undeclared identifier 'timestamp0': /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp:419
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation
+INFO: [v++ 60-1653] Closing dispatch client.

@@ -1,0 +1,3274 @@
+{
+ "session": {
+  "name": "v++_compile_hls_recv_krnl",
+  "uuid": "57109984-44d9-48fb-8ae9-254fc7efa56e",
+  "description": "v++  -t hw --platform /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm --save-temps --kernel_frequency 200 --advanced.param compiler.userPostSysLinkTcl=/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/scripts/post_sys_link.tcl --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --config ./kernel/user_krnl/hls_recv_krnl/config_sp_hls_recv_krnl.txt --config ./scripts/network_krnl_mem.txt --config ./scripts/cmac_krnl_slr.txt --report estimate -c -k hls_recv_krnl -o ./_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo -I kernel/common/include/ --input_files kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp ",
+  "timestamp": "0",
+  "report_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl/v++_compile_hls_recv_krnl_guidance.html",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "proto_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/v++_compile_hls_recv_krnl_guidance.pb",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "build_target": "",
+  "config_files": [
+   {
+    "fileName": "./kernel/user_krnl/hls_recv_krnl/config_sp_hls_recv_krnl.txt",
+    "contents": "[connectivity] \nsc=network_krnl_1.m_axis_udp_rx:hls_recv_krnl_1.s_axis_udp_rx\nsc=network_krnl_1.m_axis_udp_rx_meta:hls_recv_krnl_1.s_axis_udp_rx_meta\nsc=network_krnl_1.m_axis_tcp_port_status:hls_recv_krnl_1.s_axis_tcp_port_status\nsc=network_krnl_1.m_axis_tcp_open_status:hls_recv_krnl_1.s_axis_tcp_open_status\nsc=network_krnl_1.m_axis_tcp_notification:hls_recv_krnl_1.s_axis_tcp_notification\nsc=network_krnl_1.m_axis_tcp_rx_meta:hls_recv_krnl_1.s_axis_tcp_rx_meta\nsc=network_krnl_1.m_axis_tcp_rx_data:hls_recv_krnl_1.s_axis_tcp_rx_data\nsc=network_krnl_1.m_axis_tcp_tx_status:hls_recv_krnl_1.s_axis_tcp_tx_status\n\nsc=hls_recv_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx\nsc=hls_recv_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta\nsc=hls_recv_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port\nsc=hls_recv_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection\nsc=hls_recv_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection\nsc=hls_recv_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg\nsc=hls_recv_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta\nsc=hls_recv_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data\n\nsc=cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx\nsc=network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx"
+   },
+   {
+    "fileName": "./scripts/network_krnl_mem.txt",
+    "contents": "[connectivity] \nsp=network_krnl_1.m00_axi:DDR[2]\nsp=network_krnl_1.m01_axi:DDR[2]\n"
+   },
+   {
+    "fileName": "./scripts/cmac_krnl_slr.txt",
+    "contents": "[connectivity] \nslr=cmac_krnl_1:SLR2\n"
+   }
+  ]
+ },
+ "violation_count": 38,
+ "waived_count": 0,
+ "affirmation_count": 0,
+ "violations": {
+  "hashmap": {
+   "1": {
+    "id": 1,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Static scalars and arrays declared inside a dataflow region will be treated like local variables: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Static scalars and arrays declared inside a dataflow region will be treated like local variables: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "communication.hpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/common/include/communication.hpp",
+          "query": "",
+          "fragment": "line=713",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-111 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-111.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "2": {
+    "id": 2,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Either use an argument of the function or declare the variable inside the dataflow loop body: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Either use an argument of the function or declare the variable inside the dataflow loop body: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "communication.hpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/common/include/communication.hpp",
+          "query": "",
+          "fragment": "line=1364",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-113 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-113.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "3": {
+    "id": 3,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_recv_krnl.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp",
+          "query": "",
+          "fragment": "line=71",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-114 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=214-114.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Throughput",
+     "0": "Accelerator",
+     "1": "hls_recv_krnl"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "4": {
+    "id": 4,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Dataflow form checks found 3 issue(s) in file /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Dataflow form checks found 3 issue(s) in file /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-471 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-471.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "5": {
+    "id": 5,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot unroll loop 'LOOP_SHA3_MAIN' (!%1!) in function 'xf::security::internal::sha3Digest\u003c32u\u003e' completely: variable loop bound.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot unroll loop 'LOOP_SHA3_MAIN' (%REF) in function 'xf::security::internal::sha3Digest\u003c32u\u003e' completely: variable loop bound.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=0",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "6": {
+    "id": 6,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot unroll loop 'LOOP_SHA3_DIGEST_NBLK' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!) in function 'xf::security::internal::sha3Digest\u003c32u\u003e': cannot completely unroll a loop with a variable trip count.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot unroll loop 'LOOP_SHA3_DIGEST_NBLK' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF) in function 'xf::security::internal::sha3Digest\u003c32u\u003e': cannot completely unroll a loop with a variable trip count.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "sha3.hpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/common/include/xf_security/sha3.hpp",
+          "query": "",
+          "fragment": "line=265",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-936 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-936.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Latency",
+     "0": "Accelerator",
+     "1": "hls_recv_krnl"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "7": {
+    "id": 7,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot flatten loop 'VITIS_LOOP_1275_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!) in function 'recvData_consumeData' either the parent loop or sub loop is do-while loop.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot flatten loop 'VITIS_LOOP_1275_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF) in function 'recvData_consumeData' either the parent loop or sub loop is do-while loop.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "communication.hpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/common/include/communication.hpp",
+          "query": "",
+          "fragment": "line=1272",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-960 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "8": {
+    "id": 8,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot flatten loop 'VITIS_LOOP_183_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!) in function 'myaes' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot flatten loop 'VITIS_LOOP_183_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF) in function 'myaes' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "hls_recv_krnl.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp",
+          "query": "",
+          "fragment": "line=183",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-960 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "9": {
+    "id": 9,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot flatten loop 'VITIS_LOOP_135_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!) in function 'consumesha' the outer loop is not a perfect loop.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot flatten loop 'VITIS_LOOP_135_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF) in function 'consumesha' the outer loop is not a perfect loop.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "hls_recv_krnl.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp",
+          "query": "",
+          "fragment": "line=135",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-960 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "10": {
+    "id": 10,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Cannot flatten loop 'VITIS_LOOP_193_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP!%1!) in function 'consumeaes' the outer loop is not a perfect loop.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Cannot flatten loop 'VITIS_LOOP_193_1' (/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP%REF) in function 'consumeaes' the outer loop is not a perfect loop.\n"
+       },
+       {
+        "ref": {
+         "type": "LOOP",
+         "name": "hls_recv_krnl.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp",
+          "query": "",
+          "fragment": "line=193",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-960 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "11": {
+    "id": 11,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_730_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_730_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "12": {
+    "id": 12,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_742_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_742_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "13": {
+    "id": 13,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1218_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1218_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "14": {
+    "id": 14,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_1281_2'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_1281_2'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "15": {
+    "id": 15,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 72, loop 'VITIS_LOOP_42_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 72, loop 'VITIS_LOOP_42_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "16": {
+    "id": 16,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'partition_Loop_VITIS_LOOP_71_1_proc2761' (loop 'VITIS_LOOP_71_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read on port 's_data_net_out' (!%1!) and fifo read on port 's_data_net_out' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'partition_Loop_VITIS_LOOP_71_1_proc2761' (loop 'VITIS_LOOP_71_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read on port 's_data_net_out' (%REF) and fifo read on port 's_data_net_out' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=145",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=145",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "17": {
+    "id": 17,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_71_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_71_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "18": {
+    "id": 18,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_81_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_81_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Throughput",
+     "0": "Accelerator",
+     "1": "hls_recv_krnl"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "19": {
+    "id": 19,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write on port 'endMsgLenStrm' (!%1!) and fifo write on port 'endMsgLenStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write on port 'endMsgLenStrm' (%REF) and fifo write on port 'endMsgLenStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "20": {
+    "id": 20,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo write on port 'msgStrm' (!%1!) and fifo write on port 'msgStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo write on port 'msgStrm' (%REF) and fifo write on port 'msgStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "21": {
+    "id": 21,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo write on port 'msgStrm' (!%1!) and fifo write on port 'msgStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo write on port 'msgStrm' (%REF) and fifo write on port 'msgStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "22": {
+    "id": 22,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo write on port 'msgStrm' (!%1!) and fifo write on port 'msgStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo write on port 'msgStrm' (%REF) and fifo write on port 'msgStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "23": {
+    "id": 23,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between fifo write on port 'msgStrm' (!%1!) and fifo write on port 'msgStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_sha' (loop 'VITIS_LOOP_96_1'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between fifo write on port 'msgStrm' (%REF) and fifo write on port 'msgStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "24": {
+    "id": 24,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 8, Depth = 8, loop 'VITIS_LOOP_96_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 8, Depth = 8, loop 'VITIS_LOOP_96_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Throughput",
+     "0": "Accelerator",
+     "1": "hls_recv_krnl"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "25": {
+    "id": 25,
+    "severity": "SEV_WARNING",
+    "rule_key": "Latency",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "User specified resource constraint cannot be honored The memory core ROM_2P_LUTRAM has insufficient ports to support accesses to array 'roundIndex' (II = 1)..\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "User specified resource constraint cannot be honored The memory core ROM_2P_LUTRAM has insufficient ports to support accesses to array 'roundIndex' (II = 1)..\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-882 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-882.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Latency"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "26": {
+    "id": 26,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Unable to schedule 'load' operation ('roundIndex_load_4') on array 'roundIndex' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'roundIndex'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Unable to schedule 'load' operation ('roundIndex_load_4') on array 'roundIndex' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'roundIndex'.\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "27": {
+    "id": 27,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 12, Depth = 13, function 'KECCAK_f'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 12, Depth = 13, function 'KECCAK_f'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "28": {
+    "id": 28,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_138_2'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_138_2'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "29": {
+    "id": 29,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'prepare_aes' (loop 'VITIS_LOOP_154_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write on port 'endCiphertextStrm' (!%1!) and fifo write on port 'endCiphertextStrm' (!%2!).\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'prepare_aes' (loop 'VITIS_LOOP_154_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write on port 'endCiphertextStrm' (%REF) and fifo write on port 'endCiphertextStrm' (%REF).\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "hls_stream_39.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h",
+          "query": "",
+          "fragment": "line=174",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "30": {
+    "id": 30,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_154_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_154_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "31": {
+    "id": 31,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'updateKey' (loop 'VITIS_LOOP_583_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'bitconcatenate' operation ('__Result__') and 'partselect' operation ('tmp').\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'updateKey' (loop 'VITIS_LOOP_583_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'bitconcatenate' operation ('__Result__') and 'partselect' operation ('tmp').\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-880 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-880.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "32": {
+    "id": 32,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_583_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_583_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "33": {
+    "id": 33,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 28, function 'process'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 28, function 'process'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "34": {
+    "id": 34,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 29, loop 'decryption_cbc_loop'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 29, loop 'decryption_cbc_loop'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "35": {
+    "id": 35,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 29, loop 'decryption_cbc_loop'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 29, loop 'decryption_cbc_loop'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "36": {
+    "id": 36,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_196_2'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_196_2'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "37": {
+    "id": 37,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "**** Loop Constraint Status: All loop constraints were NOT satisfied.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "**** Loop Constraint Status: All loop constraints were NOT satisfied.\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "38": {
+    "id": 38,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "**** Estimated Fmax: 273.97 MHz\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "**** Estimated Fmax: 273.97 MHz\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "hls_recv_krnl",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ },
+ "specs_violated": {
+  "hashmap": {
+   "Latency": {
+    "key": "Latency",
+    "full_name": "HLS Latency Related",
+    "owner": "HLS",
+    "raw_msg": "%s",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "0": "Accelerator",
+     "1": "Kernel",
+     "2": "Latency"
+    },
+    "resolution_msg": "",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "Kernel": {
+    "key": "Kernel",
+    "full_name": "HLS Kernel Related",
+    "owner": "HLS",
+    "raw_msg": "%s",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "0": "Accelerator",
+     "1": "Kernel",
+     "2": "Kernel"
+    },
+    "resolution_msg": "",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "Throughput": {
+    "key": "Throughput",
+    "full_name": "HLS Throughput Related",
+    "owner": "HLS",
+    "raw_msg": "%s",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "0": "Accelerator",
+     "1": "Kernel",
+     "2": "Throughput"
+    },
+    "resolution_msg": "",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2020.2;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ }
+}
+

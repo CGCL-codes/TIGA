@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hls_recv_krnl" dir="">
+  <FileSets>
+    <FileSet Name="kernel_hls_recv_krnl" Type="DesignSrcs">
+      <File Path="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

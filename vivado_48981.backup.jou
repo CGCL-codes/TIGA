@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec 11 15:19:55 2022
+# Process ID: 48981
+# Current directory: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP
+# Command line: vivado -mode batch -source scripts/gen_xo.tcl -tclargs ./_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/cmac_krnl.xo cmac_krnl hw /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm xilinx_u250_gen3x16_xdma_3_1_202020_1 kernel/cmac_krnl/cmac_krnl.xml kernel/cmac_krnl/package_cmac_krnl.tcl
+# Log file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vivado.log
+# Journal file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vivado.jou
+#-----------------------------------------------------------
+source scripts/gen_xo.tcl

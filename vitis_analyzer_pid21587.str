@@ -1,0 +1,109 @@
+/*
+
+Xilinx Vitis Analyzer v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:47 MST 2020
+
+Process ID (PID): 21587
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Dec 12 09:09:06 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Ubuntu
+OS Version: 4.15.0-166-generic
+OS Architecture: amd64
+Available processors (cores): 56
+
+Display: localhost:12.0
+Screen size: 1536x960
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/space1/Xilinx20202/Vitis/2020.2/tps/lnx64/jre11.0.2
+Java executable location: 	/space1/Xilinx20202/Vitis/2020.2/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	C1
+User home directory: /home/C1
+User working directory: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /space1/Xilinx20202/Vitis
+HDI_APPROOT: /space1/Xilinx20202/Vitis/2020.2
+RDI_DATADIR: /space1/Xilinx20202/Vitis/2020.2/data
+RDI_BINDIR: /space1/Xilinx20202/Vitis/2020.2/bin
+
+Vitis Analyzer preferences file location: /home/C1/.Xilinx/vitis_analyzer/2020.2/vitis_analyzer.xml
+Vitis Analyzer preferences directory: /home/C1/.Xilinx/vitis_analyzer/2020.2/
+Vitis Analyzer layouts directory: /home/C1/.Xilinx/vitis_analyzer/2020.2/data/layouts
+PlanAhead jar file location: 	/space1/Xilinx20202/Vitis/2020.2/lib/classes/frank.jar
+Vitis Analyzer log file location: 	/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vitis_analyzer.log
+Vitis Analyzer journal file location: 	/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vitis_analyzer.jou
+Engine tmp dir: 	./.Xil/vitis_analyzer-21587-ubuntu87
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_HLS: /space1/Xilinx20202/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: /space1/Xilinx20202/Vitis/2020.2
+XILINX_SDK: /space1/Xilinx20202/Vitis/2020.2
+XILINX_VITIS: /space1/Xilinx20202/Vitis/2020.2
+XILINX_VITIS_AIETOOLS: /space1/Xilinx20202/Vitis/2020.2/cardano
+XILINX_VIVADO: /space1/Xilinx20202/Vivado/2020.2
+XILINX_VIVADO_HLS: /space1/Xilinx20202/Vivado/2020.2
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,457 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Command line args: 
+// Vitis Analyzer Command Line Arguments: ./build_dir.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/network.xclbin.link_summary
+// bz (cs):  Open Files : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  3945 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1555 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,457 MB. GUI used memory: 52 MB. Current time: 12/12/22, 9:09:06 AM CST
+dismissDialog("Open Files"); // bz
+// Tcl Command: 'create_project dummy'
+// TclEventType: PROJECT_NEW
+// Opening Summary: Resource{value=FrankResource.FrankReportHolderType_LINK_SUMMARY}Type{value=LINK_SUMMARY},SummaryFile{file=/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/build_dir.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/network.xclbin.link_summary}
+// bz (cs):  Open Summary : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1903 ms.
+// Tcl Message: create_project dummy 
+dismissDialog("Open Summary"); // bz
+// [GUI Memory]: 62 MB (+62450kb) [00:00:30]
+// [Engine Memory]: 1,489 MB (+1410124kb) [00:00:30]
+selectTree(FrankResource.ReportNavigatorTreePanel_REPORT_NAVIGATOR_TREE, "[root, Resource{value=FrankResource.FrankViewType_HLS_SYNTHESIS}Type{value=HLS_REPORT},SummaryFile{file=hls_recv_krnl.xo.compile_summary isArchive=false},ReportFile{file=db/hls_recv_krnl.design.xml}]", 10, false); // b
+// bz (cs):  Open HLS Synthesis Report : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2280 ms.
+dismissDialog("Open HLS Synthesis Report"); // bz
+// Opening Report: Resource{value=FrankResource.FrankViewType_HLS_SYNTHESIS}Type{value=HLS_REPORT},SummaryFile{file=hls_recv_krnl.xo.compile_summary isArchive=false},ReportFile{file=db/hls_recv_krnl.design.xml}
+selectTree(FrankResource.ReportNavigatorTreePanel_REPORT_NAVIGATOR_TREE, "[root, Resource{value=FrankResource.FrankViewType_HLS_SYNTHESIS}Type{value=HLS_REPORT},SummaryFile{file=hls_recv_krnl.xo.compile_summary isArchive=false},ReportFile{file=db/hls_recv_krnl.design.xml}]", 10, false); // b
+// WARNING: HEventQueue.dispatchEvent() is taking  1046 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1075 ms.
+// Elapsed time: 26 seconds
+selectTreeTable(FrankResource.HlsReportTreeTablePanel_TREE_TABLE, "VITIS_LOOP_1281_2 ;  ;  ;  ; 1 ; 1 ;  ; yes ;  ;  ;  ;  ;  ;  ;  ;  ; ", 26, (String) null, 3, false); // e
+// WARNING: HEventQueue.dispatchEvent() is taking  1171 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1017 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1041 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1044 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1067 ms.
+// Elapsed time: 74 seconds
+selectTreeTable(FrankResource.HlsReportTreeTablePanel_TREE_TABLE, "VITIS_LOOP_1218_1 ;  ;  ;  ; 2 ; 1 ;  ; yes ;  ;  ;  ;  ;  ;  ;  ;  ; ", 23, (String) null, 1, false); // e
+// WARNING: HEventQueue.dispatchEvent() is taking  1070 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1197 ms.

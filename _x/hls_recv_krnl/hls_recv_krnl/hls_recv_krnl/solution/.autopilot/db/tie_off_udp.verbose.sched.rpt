@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vitis HLS Report for 'tie_off_udp'
+================================================================
+* Date:           Sun Dec 11 15:16:47 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|      0 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  10.000 ns|  10.000 ns|    2|    2|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_udp_tx_meta_V_last_V, i32 %m_axis_udp_tx_meta_V_strb_V, i32 %m_axis_udp_tx_meta_V_keep_V, i256 %m_axis_udp_tx_meta_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_udp_rx_meta_V_last_V, i32 %s_axis_udp_rx_meta_V_strb_V, i32 %s_axis_udp_rx_meta_V_keep_V, i256 %s_axis_udp_rx_meta_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_udp_tx_V_last_V, i64 %m_axis_udp_tx_V_strb_V, i64 %m_axis_udp_tx_V_keep_V, i512 %m_axis_udp_tx_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_udp_rx_V_last_V, i64 %s_axis_udp_rx_V_strb_V, i64 %s_axis_udp_rx_V_keep_V, i512 %s_axis_udp_rx_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.axis.i512P0A.i64P0A.i64P0A.i1P0A, i512 %s_axis_udp_rx_V_data_V, i64 %s_axis_udp_rx_V_keep_V, i64 %s_axis_udp_rx_V_strb_V, i1 %s_axis_udp_rx_V_last_V, i32 1"   --->   Operation 8 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln1375 = br i1 %tmp, void %._crit_edge, void" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:1375]   --->   Operation 9 'br' 'br_ln1375' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty = read i641 @_ssdm_op_Read.axis.volatile.i512P0A.i64P0A.i64P0A.i1P0A, i512 %s_axis_udp_rx_V_data_V, i64 %s_axis_udp_rx_V_keep_V, i64 %s_axis_udp_rx_V_strb_V, i1 %s_axis_udp_rx_V_last_V"   --->   Operation 10 'read' 'empty' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%udp_rx_data = extractvalue i641 %empty"   --->   Operation 11 'extractvalue' 'udp_rx_data' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_i18_keep = extractvalue i641 %empty"   --->   Operation 12 'extractvalue' 'tmp_i18_keep' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_i18_strb = extractvalue i641 %empty"   --->   Operation 13 'extractvalue' 'tmp_i18_strb' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_i18_last = extractvalue i641 %empty"   --->   Operation 14 'extractvalue' 'tmp_i18_last' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i512P0A.i64P0A.i64P0A.i1P0A, i512 %m_axis_udp_tx_V_data_V, i64 %m_axis_udp_tx_V_keep_V, i64 %m_axis_udp_tx_V_strb_V, i1 %m_axis_udp_tx_V_last_V, i512 %udp_rx_data, i64 %tmp_i18_keep, i64 %tmp_i18_strb, i1 %tmp_i18_last"   --->   Operation 15 'write' 'write_ln304' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i512P0A.i64P0A.i64P0A.i1P0A, i512 %m_axis_udp_tx_V_data_V, i64 %m_axis_udp_tx_V_keep_V, i64 %m_axis_udp_tx_V_strb_V, i1 %m_axis_udp_tx_V_last_V, i512 %udp_rx_data, i64 %tmp_i18_keep, i64 %tmp_i18_strb, i1 %tmp_i18_last"   --->   Operation 16 'write' 'write_ln304' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln1379 = br void %._crit_edge" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:1379]   --->   Operation 17 'br' 'br_ln1379' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_1 = nbreadreq i1 @_ssdm_op_NbReadReq.axis.i256P0A.i32P0A.i32P0A.i1P0A, i256 %s_axis_udp_rx_meta_V_data_V, i32 %s_axis_udp_rx_meta_V_keep_V, i32 %s_axis_udp_rx_meta_V_strb_V, i1 %s_axis_udp_rx_meta_V_last_V, i32 1"   --->   Operation 18 'nbreadreq' 'tmp_1' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln1381 = br i1 %tmp_1, void %._crit_edge1, void" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:1381]   --->   Operation 19 'br' 'br_ln1381' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty_67 = read i321 @_ssdm_op_Read.axis.volatile.i256P0A.i32P0A.i32P0A.i1P0A, i256 %s_axis_udp_rx_meta_V_data_V, i32 %s_axis_udp_rx_meta_V_keep_V, i32 %s_axis_udp_rx_meta_V_strb_V, i1 %s_axis_udp_rx_meta_V_last_V"   --->   Operation 20 'read' 'empty_67' <Predicate = (tmp_1)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_i_data = extractvalue i321 %empty_67"   --->   Operation 21 'extractvalue' 'tmp_i_data' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_i_keep = extractvalue i321 %empty_67"   --->   Operation 22 'extractvalue' 'tmp_i_keep' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_i_strb = extractvalue i321 %empty_67"   --->   Operation 23 'extractvalue' 'tmp_i_strb' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_i_last = extractvalue i321 %empty_67"   --->   Operation 24 'extractvalue' 'tmp_i_last' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 25 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i256P0A.i32P0A.i32P0A.i1P0A, i256 %m_axis_udp_tx_meta_V_data_V, i32 %m_axis_udp_tx_meta_V_keep_V, i32 %m_axis_udp_tx_meta_V_strb_V, i1 %m_axis_udp_tx_meta_V_last_V, i256 %tmp_i_data, i32 %tmp_i_keep, i32 %tmp_i_strb, i1 %tmp_i_last"   --->   Operation 25 'write' 'write_ln304' <Predicate = (tmp_1)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i256P0A.i32P0A.i32P0A.i1P0A, i256 %m_axis_udp_tx_meta_V_data_V, i32 %m_axis_udp_tx_meta_V_keep_V, i32 %m_axis_udp_tx_meta_V_strb_V, i1 %m_axis_udp_tx_meta_V_last_V, i256 %tmp_i_data, i32 %tmp_i_keep, i32 %tmp_i_strb, i1 %tmp_i_last"   --->   Operation 26 'write' 'write_ln304' <Predicate = (tmp_1)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln1385 = br void %._crit_edge1" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:1385]   --->   Operation 27 'br' 'br_ln1385' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln1386 = ret" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:1386]   --->   Operation 28 'ret' 'ret_ln1386' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,15 @@
+Sun Dec 11 15:21:39 2022: Server was asked to start on port: '36551'
+Sun Dec 11 15:21:39 2022: Server is using token UUID: '75432f8a-c6b7-4511-97f0-e46e521e6e6b'
+Sun Dec 11 15:21:39 2022: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Sun Dec 11 15:21:39 2022: Attempting to start server on port '36551'
+Sun Dec 11 15:21:39 2022: XCD main fifo: created main fifo '/tmp/xcdmain75432f8a-c6b7-4511-97f0-e46e521e6e6b', fd read = 13
+Sun Dec 11 15:21:39 2022: Running Dispatch Server
+Sun Dec 11 15:21:39 2022: Version 2.1.0
+Sun Dec 11 15:21:48 2022: Dispatch Server: Accepted socket connection from client
+Sun Dec 11 15:21:48 2022: EXCHANGE_TOKEN received, server token: 75432f8a-c6b7-4511-97f0-e46e521e6e6b, passed token: 75432f8a-c6b7-4511-97f0-e46e521e6e6b
+Sun Dec 11 15:21:48 2022: SESSION_MGR: creating session with session uuid: '5cb0acb7-f435-47e5-b5df-a56f73641f65' and name 'v++_link_network'
+Sun Dec 11 15:21:48 2022: GUIDANCE_SMGR: creating guidance session with uuid: '5cb0acb7-f435-47e5-b5df-a56f73641f65' and name 'v++_link_network'
+Sun Dec 11 15:22:37 2022: Dispatch Server: Accepted socket connection from client
+Sun Dec 11 15:22:56 2022: Dispatch Server: Accepted socket connection from client
+Sun Dec 11 15:30:39 2022: Dispatch Server: Accepted socket connection from client
+Sun Dec 11 15:30:40 2022: Dispatch Server: Accepted socket connection from client

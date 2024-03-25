@@ -1,0 +1,3 @@
+[connectivity] 
+sp=network_krnl_1.m00_axi:DDR[2]
+sp=network_krnl_1.m01_axi:DDR[2]

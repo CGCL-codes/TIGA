@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'recvData_handshake'
+================================================================
+* Date:           Sun Dec 11 15:17:22 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.818 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_1218_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|      131|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|      101|     -|
+|Register             |        -|      -|      184|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      184|      232|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |rxByteCnt_V_1_fu_184_p2           |         +|   0|  0|  71|          64|          64|
+    |ap_block_state2_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io                |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op84_write_state3    |       and|   0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_96_p6            |       and|   0|  0|   2|           1|           0|
+    |icmp_ln874_fu_167_p2              |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln878_fu_198_p2              |      icmp|   0|  0|  29|          64|          64|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 131|         153|         138|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                            |  20|          4|    1|          4|
+    |ap_done                              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1              |   9|          2|    1|          2|
+    |ap_sig_allocacmp_rxByteCnt_V_2       |   9|          2|   64|        128|
+    |expRxBytePerSession_blk_n            |   9|          2|    1|          2|
+    |expRxBytePerSession_out_blk_n        |   9|          2|    1|          2|
+    |m_axis_tcp_read_pkg_TDATA_blk_n      |   9|          2|    1|          2|
+    |nextRxPacketLength3_blk_n            |   9|          2|    1|          2|
+    |rxByteCnt_V_fu_78                    |   9|          2|   64|        128|
+    |s_axis_tcp_notification_TDATA_blk_n  |   9|          2|    1|          2|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                | 101|         22|  136|        274|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   3|   0|    3|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |expRxBytePerSession_read_reg_211  |  64|   0|   64|          0|
+    |icmp_ln874_reg_225                |   1|   0|    1|          0|
+    |length_V_reg_220                  |  16|   0|   16|          0|
+    |p_Result_s_reg_229                |  32|   0|   32|          0|
+    |rxByteCnt_V_fu_78                 |  64|   0|   64|          0|
+    |tmp_reg_216                       |   1|   0|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 184|   0|  184|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+----------------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++--------------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_continue                     |   in|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|                recvData_handshake|  return value|
+|nextRxPacketLength3_din         |  out|   16|     ap_fifo|               nextRxPacketLength3|       pointer|
+|nextRxPacketLength3_full_n      |   in|    1|     ap_fifo|               nextRxPacketLength3|       pointer|
+|nextRxPacketLength3_write       |  out|    1|     ap_fifo|               nextRxPacketLength3|       pointer|
+|expRxBytePerSession_dout        |   in|   64|     ap_fifo|               expRxBytePerSession|       pointer|
+|expRxBytePerSession_empty_n     |   in|    1|     ap_fifo|               expRxBytePerSession|       pointer|
+|expRxBytePerSession_read        |  out|    1|     ap_fifo|               expRxBytePerSession|       pointer|
+|s_axis_tcp_notification_TDATA   |   in|  128|        axis|  s_axis_tcp_notification_V_data_V|       pointer|
+|s_axis_tcp_notification_TVALID  |   in|    1|        axis|  s_axis_tcp_notification_V_data_V|       pointer|
+|s_axis_tcp_notification_TREADY  |  out|    1|        axis|  s_axis_tcp_notification_V_last_V|       pointer|
+|s_axis_tcp_notification_TLAST   |   in|    1|        axis|  s_axis_tcp_notification_V_last_V|       pointer|
+|s_axis_tcp_notification_TKEEP   |   in|   16|        axis|  s_axis_tcp_notification_V_keep_V|       pointer|
+|s_axis_tcp_notification_TSTRB   |   in|   16|        axis|  s_axis_tcp_notification_V_strb_V|       pointer|
+|m_axis_tcp_read_pkg_TDATA       |  out|   32|        axis|      m_axis_tcp_read_pkg_V_data_V|       pointer|
+|m_axis_tcp_read_pkg_TREADY      |   in|    1|        axis|      m_axis_tcp_read_pkg_V_data_V|       pointer|
+|m_axis_tcp_read_pkg_TVALID      |  out|    1|        axis|      m_axis_tcp_read_pkg_V_last_V|       pointer|
+|m_axis_tcp_read_pkg_TLAST       |  out|    1|        axis|      m_axis_tcp_read_pkg_V_last_V|       pointer|
+|m_axis_tcp_read_pkg_TKEEP       |  out|    4|        axis|      m_axis_tcp_read_pkg_V_keep_V|       pointer|
+|m_axis_tcp_read_pkg_TSTRB       |  out|    4|        axis|      m_axis_tcp_read_pkg_V_strb_V|       pointer|
+|expRxBytePerSession_out_din     |  out|   64|     ap_fifo|           expRxBytePerSession_out|       pointer|
+|expRxBytePerSession_out_full_n  |   in|    1|     ap_fifo|           expRxBytePerSession_out|       pointer|
+|expRxBytePerSession_out_write   |  out|    1|     ap_fifo|           expRxBytePerSession_out|       pointer|
++--------------------------------+-----+-----+------------+----------------------------------+--------------+
+

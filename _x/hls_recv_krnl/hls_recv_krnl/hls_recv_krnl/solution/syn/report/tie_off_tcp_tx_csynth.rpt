@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'tie_off_tcp_tx'
+================================================================
+* Date:           Sun Dec 11 15:18:34 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.409 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  10.000 ns|  10.000 ns|    2|    2|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       18|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       56|     -|
+|Register             |        -|      -|        4|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        4|       74|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1_io         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io         |       and|   0|  0|   2|           1|           1|
+    |tmp_1_nbreadreq_fu_141_p6  |       and|   0|  0|   2|           1|           0|
+    |tmp_nbreadreq_fu_80_p3     |       and|   0|  0|   2|           2|           0|
+    |tmp_s_nbreadreq_fu_112_p3  |       and|   0|  0|   2|           2|           0|
+    |ap_block_state1            |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2            |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_io         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3            |        or|   0|  0|   2|           1|           1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  18|          11|           6|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  20|          4|    1|          4|
+    |ap_done                           |   9|          2|    1|          2|
+    |m_axis_tcp_tx_data_TDATA_blk_n    |   9|          2|    1|          2|
+    |m_axis_tcp_tx_meta_TDATA_blk_n    |   9|          2|    1|          2|
+    |s_axis_tcp_tx_status_TDATA_blk_n  |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  56|         12|    5|         12|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------+---+----+-----+-----------+
+    |      Name     | FF| LUT| Bits| Const Bits|
+    +---------------+---+----+-----+-----------+
+    |ap_CS_fsm      |  3|   0|    3|          0|
+    |ap_done_reg    |  1|   0|    1|          0|
+    |tmp_reg_204    |  0|   0|    1|          1|
+    |tmp_s_reg_213  |  0|   0|    1|          1|
+    +---------------+---+----+-----+-----------+
+    |Total          |  4|   0|    6|          2|
+    +---------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+-------------------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |         Source Object         |    C Type    |
++-----------------------------+-----+-----+------------+-------------------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|                 tie_off_tcp_tx|  return value|
+|m_axis_tcp_tx_meta_TDATA     |  out|   32|        axis|    m_axis_tcp_tx_meta_V_data_V|       pointer|
+|m_axis_tcp_tx_meta_TVALID    |  out|    1|        axis|    m_axis_tcp_tx_meta_V_last_V|       pointer|
+|m_axis_tcp_tx_meta_TREADY    |   in|    1|        axis|    m_axis_tcp_tx_meta_V_last_V|       pointer|
+|m_axis_tcp_tx_meta_TLAST     |  out|    1|        axis|    m_axis_tcp_tx_meta_V_last_V|       pointer|
+|m_axis_tcp_tx_meta_TKEEP     |  out|    4|        axis|    m_axis_tcp_tx_meta_V_keep_V|       pointer|
+|m_axis_tcp_tx_meta_TSTRB     |  out|    4|        axis|    m_axis_tcp_tx_meta_V_strb_V|       pointer|
+|m_axis_tcp_tx_data_TDATA     |  out|  512|        axis|    m_axis_tcp_tx_data_V_data_V|       pointer|
+|m_axis_tcp_tx_data_TVALID    |  out|    1|        axis|    m_axis_tcp_tx_data_V_last_V|       pointer|
+|m_axis_tcp_tx_data_TREADY    |   in|    1|        axis|    m_axis_tcp_tx_data_V_last_V|       pointer|
+|m_axis_tcp_tx_data_TLAST     |  out|    1|        axis|    m_axis_tcp_tx_data_V_last_V|       pointer|
+|m_axis_tcp_tx_data_TKEEP     |  out|   64|        axis|    m_axis_tcp_tx_data_V_keep_V|       pointer|
+|m_axis_tcp_tx_data_TSTRB     |  out|   64|        axis|    m_axis_tcp_tx_data_V_strb_V|       pointer|
+|s_axis_tcp_tx_status_TDATA   |   in|   64|        axis|  s_axis_tcp_tx_status_V_data_V|       pointer|
+|s_axis_tcp_tx_status_TVALID  |   in|    1|        axis|  s_axis_tcp_tx_status_V_last_V|       pointer|
+|s_axis_tcp_tx_status_TREADY  |  out|    1|        axis|  s_axis_tcp_tx_status_V_last_V|       pointer|
+|s_axis_tcp_tx_status_TLAST   |   in|    1|        axis|  s_axis_tcp_tx_status_V_last_V|       pointer|
+|s_axis_tcp_tx_status_TKEEP   |   in|    8|        axis|  s_axis_tcp_tx_status_V_keep_V|       pointer|
+|s_axis_tcp_tx_status_TSTRB   |   in|    8|        axis|  s_axis_tcp_tx_status_V_strb_V|       pointer|
++-----------------------------+-----+-----+------------+-------------------------------+--------------+
+

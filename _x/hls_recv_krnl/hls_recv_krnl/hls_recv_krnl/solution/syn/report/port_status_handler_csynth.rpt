@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'port_status_handler'
+================================================================
+* Date:           Sun Dec 11 15:17:22 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.398 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_742_1  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       62|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       56|     -|
+|Register             |        -|      -|       67|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|       67|      118|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln742_fu_75_p2   |         +|   0|  0|  38|          31|           1|
+    |ap_block_state2      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln742_fu_85_p2  |      icmp|   0|  0|  20|          32|          32|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  62|          65|          35|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------+----+-----------+-----+-----------+
+    |                Name                | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                           |  20|          4|    1|          4|
+    |ap_done                             |   9|          2|    1|          2|
+    |i_reg_64                            |   9|          2|   31|         62|
+    |s_axis_tcp_port_status_TDATA_blk_n  |   9|          2|    1|          2|
+    |useConn_blk_n                       |   9|          2|    1|          2|
+    +------------------------------------+----+-----------+-----+-----------+
+    |Total                               |  56|         12|   35|         72|
+    +------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------+----+----+-----+-----------+
+    |         Name        | FF | LUT| Bits| Const Bits|
+    +---------------------+----+----+-----+-----------+
+    |ap_CS_fsm            |   3|   0|    3|          0|
+    |ap_done_reg          |   1|   0|    1|          0|
+    |i_reg_64             |  31|   0|   31|          0|
+    |useConn_read_reg_90  |  32|   0|   32|          0|
+    +---------------------+----+----+-----+-----------+
+    |Total                |  67|   0|   67|          0|
+    +---------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+---------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++-------------------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|              port_status_handler|  return value|
+|useConn_dout                   |   in|   32|     ap_fifo|                          useConn|       pointer|
+|useConn_empty_n                |   in|    1|     ap_fifo|                          useConn|       pointer|
+|useConn_read                   |  out|    1|     ap_fifo|                          useConn|       pointer|
+|s_axis_tcp_port_status_TDATA   |   in|    8|        axis|  s_axis_tcp_port_status_V_data_V|       pointer|
+|s_axis_tcp_port_status_TVALID  |   in|    1|        axis|  s_axis_tcp_port_status_V_data_V|       pointer|
+|s_axis_tcp_port_status_TREADY  |  out|    1|        axis|  s_axis_tcp_port_status_V_last_V|       pointer|
+|s_axis_tcp_port_status_TLAST   |   in|    1|        axis|  s_axis_tcp_port_status_V_last_V|       pointer|
+|s_axis_tcp_port_status_TKEEP   |   in|    1|        axis|  s_axis_tcp_port_status_V_keep_V|       pointer|
+|s_axis_tcp_port_status_TSTRB   |   in|    1|        axis|  s_axis_tcp_port_status_V_strb_V|       pointer|
++-------------------------------+-----+-----+------------+---------------------------------+--------------+
+

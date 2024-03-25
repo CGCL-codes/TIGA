@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: hls_recv_krnl
+Log file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/vitis_hls.log

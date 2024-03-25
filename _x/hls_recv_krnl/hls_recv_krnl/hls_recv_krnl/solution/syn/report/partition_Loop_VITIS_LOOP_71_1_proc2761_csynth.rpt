@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'partition_Loop_VITIS_LOOP_71_1_proc2761'
+================================================================
+* Date:           Sun Dec 11 15:17:23 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.824 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_71_1  |        ?|        ?|         2|          2|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       63|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       98|     -|
+|Register             |        -|      -|      614|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      614|      161|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Cnt_V_1_fu_102_p2     |         +|   0|  0|  39|          32|           1|
+    |icmp_ln878_fu_108_p2  |      icmp|   0|  0|  20|          32|          32|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3       |        or|   0|  0|   2|           1|           1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  63|          66|          35|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Cnt_V_reg_91                     |   9|          2|   32|         64|
+    |ComputeWordCnt_loc_out1_blk_n    |   9|          2|    1|          2|
+    |ComputeWordCnt_loc_out_blk_n     |   9|          2|    1|          2|
+    |ap_NS_fsm                        |  26|          5|    1|          5|
+    |ap_done                          |   9|          2|    1|          2|
+    |s_data_cal_blk_n                 |   9|          2|    1|          2|
+    |s_data_net_out_blk_n             |   9|          2|    1|          2|
+    |s_data_out_blk_n                 |   9|          2|    1|          2|
+    |scalar_ComputeWordCnt_loc_blk_n  |   9|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  98|         21|   40|         83|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+-----+----+-----+-----------+
+    |                  Name                  |  FF | LUT| Bits| Const Bits|
+    +----------------------------------------+-----+----+-----+-----------+
+    |Cnt_V_1_reg_118                         |   32|   0|   32|          0|
+    |Cnt_V_reg_91                            |   32|   0|   32|          0|
+    |ap_CS_fsm                               |    4|   0|    4|          0|
+    |ap_done_reg                             |    1|   0|    1|          0|
+    |icmp_ln878_reg_128                      |    1|   0|    1|          0|
+    |scalar_ComputeWordCnt_loc_read_reg_113  |   32|   0|   32|          0|
+    |tmp_reg_123                             |  512|   0|  512|          0|
+    +----------------------------------------+-----+----+-----+-----------+
+    |Total                                   |  614|   0|  614|          0|
+    +----------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++-----------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  partition_Loop_VITIS_LOOP_71_1_proc2761|  return value|
+|scalar_ComputeWordCnt_loc_dout     |   in|   32|     ap_fifo|                scalar_ComputeWordCnt_loc|       pointer|
+|scalar_ComputeWordCnt_loc_empty_n  |   in|    1|     ap_fifo|                scalar_ComputeWordCnt_loc|       pointer|
+|scalar_ComputeWordCnt_loc_read     |  out|    1|     ap_fifo|                scalar_ComputeWordCnt_loc|       pointer|
+|ComputeWordCnt_loc_out_din         |  out|   32|     ap_fifo|                   ComputeWordCnt_loc_out|       pointer|
+|ComputeWordCnt_loc_out_full_n      |   in|    1|     ap_fifo|                   ComputeWordCnt_loc_out|       pointer|
+|ComputeWordCnt_loc_out_write       |  out|    1|     ap_fifo|                   ComputeWordCnt_loc_out|       pointer|
+|ComputeWordCnt_loc_out1_din        |  out|   32|     ap_fifo|                  ComputeWordCnt_loc_out1|       pointer|
+|ComputeWordCnt_loc_out1_full_n     |   in|    1|     ap_fifo|                  ComputeWordCnt_loc_out1|       pointer|
+|ComputeWordCnt_loc_out1_write      |  out|    1|     ap_fifo|                  ComputeWordCnt_loc_out1|       pointer|
+|s_data_net_out_dout                |   in|  512|     ap_fifo|                           s_data_net_out|       pointer|
+|s_data_net_out_empty_n             |   in|    1|     ap_fifo|                           s_data_net_out|       pointer|
+|s_data_net_out_read                |  out|    1|     ap_fifo|                           s_data_net_out|       pointer|
+|s_data_cal_din                     |  out|  512|     ap_fifo|                               s_data_cal|       pointer|
+|s_data_cal_full_n                  |   in|    1|     ap_fifo|                               s_data_cal|       pointer|
+|s_data_cal_write                   |  out|    1|     ap_fifo|                               s_data_cal|       pointer|
+|s_data_out_din                     |  out|  512|     ap_fifo|                               s_data_out|       pointer|
+|s_data_out_full_n                  |   in|    1|     ap_fifo|                               s_data_out|       pointer|
+|s_data_out_write                   |  out|    1|     ap_fifo|                               s_data_out|       pointer|
++-----------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

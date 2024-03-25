@@ -1,0 +1,275 @@
+<ENTRY>
+{
+ "thisFile": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 11 15:11:37 2022",
+ "timestampMillis": "1670742697444",
+ "buildStep": {
+  "cmdId": "b9ac526a-d7f4-455e-ac15-71255999818f",
+  "name": "v++",
+  "logFile": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl.steps.log",
+  "commandLine": "/space1/Xilinx20202/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw --platform /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm --save-temps --kernel_frequency 200 --advanced.param compiler.userPostSysLinkTcl=/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/scripts/post_sys_link.tcl --dk chipscope:network_krnl_1:m_axis_tcp_open_status --dk chipscope:network_krnl_1:s_axis_tcp_tx_meta --dk chipscope:network_krnl_1:m_axis_tcp_tx_status --dk chipscope:network_krnl_1:s_axis_tcp_open_connection --dk chipscope:network_krnl_1:m_axis_tcp_port_status --dk chipscope:network_krnl_1:m_axis_tcp_notification --dk chipscope:network_krnl_1:m_axis_tcp_rx_meta --dk chipscope:network_krnl_1:s_axis_tcp_read_pkg --dk chipscope:network_krnl_1:s_axis_tcp_listen_port --config ./kernel/user_krnl/hls_recv_krnl/config_sp_hls_recv_krnl.txt --config ./scripts/network_krnl_mem.txt --config ./scripts/cmac_krnl_slr.txt --report estimate -c -k hls_recv_krnl -o ./_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo -I kernel/common/include/ --input_files kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp ",
+  "args": [
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm",
+   "--save-temps",
+   "--kernel_frequency",
+   "200",
+   "--advanced.param",
+   "compiler.userPostSysLinkTcl=/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/scripts/post_sys_link.tcl",
+   "--dk",
+   "chipscope:network_krnl_1:m_axis_tcp_open_status",
+   "--dk",
+   "chipscope:network_krnl_1:s_axis_tcp_tx_meta",
+   "--dk",
+   "chipscope:network_krnl_1:m_axis_tcp_tx_status",
+   "--dk",
+   "chipscope:network_krnl_1:s_axis_tcp_open_connection",
+   "--dk",
+   "chipscope:network_krnl_1:m_axis_tcp_port_status",
+   "--dk",
+   "chipscope:network_krnl_1:m_axis_tcp_notification",
+   "--dk",
+   "chipscope:network_krnl_1:m_axis_tcp_rx_meta",
+   "--dk",
+   "chipscope:network_krnl_1:s_axis_tcp_read_pkg",
+   "--dk",
+   "chipscope:network_krnl_1:s_axis_tcp_listen_port",
+   "--config",
+   "./kernel/user_krnl/hls_recv_krnl/config_sp_hls_recv_krnl.txt",
+   "--config",
+   "./scripts/network_krnl_mem.txt",
+   "--config",
+   "./scripts/cmac_krnl_slr.txt",
+   "--report",
+   "estimate",
+   "-c",
+   "-k",
+   "hls_recv_krnl",
+   "-o",
+   "./_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo",
+   "-I",
+   "kernel/common/include/",
+   "--input_files",
+   "kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/config_sp_hls_recv_krnl.txt",
+    "content": "[connectivity] \nsc=network_krnl_1.m_axis_udp_rx:hls_recv_krnl_1.s_axis_udp_rx\nsc=network_krnl_1.m_axis_udp_rx_meta:hls_recv_krnl_1.s_axis_udp_rx_meta\nsc=network_krnl_1.m_axis_tcp_port_status:hls_recv_krnl_1.s_axis_tcp_port_status\nsc=network_krnl_1.m_axis_tcp_open_status:hls_recv_krnl_1.s_axis_tcp_open_status\nsc=network_krnl_1.m_axis_tcp_notification:hls_recv_krnl_1.s_axis_tcp_notification\nsc=network_krnl_1.m_axis_tcp_rx_meta:hls_recv_krnl_1.s_axis_tcp_rx_meta\nsc=network_krnl_1.m_axis_tcp_rx_data:hls_recv_krnl_1.s_axis_tcp_rx_data\nsc=network_krnl_1.m_axis_tcp_tx_status:hls_recv_krnl_1.s_axis_tcp_tx_status\n\nsc=hls_recv_krnl_1.m_axis_udp_tx:network_krnl_1.s_axis_udp_tx\nsc=hls_recv_krnl_1.m_axis_udp_tx_meta:network_krnl_1.s_axis_udp_tx_meta\nsc=hls_recv_krnl_1.m_axis_tcp_listen_port:network_krnl_1.s_axis_tcp_listen_port\nsc=hls_recv_krnl_1.m_axis_tcp_open_connection:network_krnl_1.s_axis_tcp_open_connection\nsc=hls_recv_krnl_1.m_axis_tcp_close_connection:network_krnl_1.s_axis_tcp_close_connection\nsc=hls_recv_krnl_1.m_axis_tcp_read_pkg:network_krnl_1.s_axis_tcp_read_pkg\nsc=hls_recv_krnl_1.m_axis_tcp_tx_meta:network_krnl_1.s_axis_tcp_tx_meta\nsc=hls_recv_krnl_1.m_axis_tcp_tx_data:network_krnl_1.s_axis_tcp_tx_data\n\nsc=cmac_krnl_1.axis_net_rx:network_krnl_1.axis_net_rx\nsc=network_krnl_1.axis_net_tx:cmac_krnl_1.axis_net_tx"
+   },
+   {
+    "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/scripts/network_krnl_mem.txt",
+    "content": "[connectivity] \nsp=network_krnl_1.m00_axi:DDR[2]\nsp=network_krnl_1.m01_axi:DDR[2]\n"
+   },
+   {
+    "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/scripts/cmac_krnl_slr.txt",
+    "content": "[connectivity] \nslr=cmac_krnl_1:SLR2\n"
+   }
+  ],
+  "cwd": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 11 15:11:37 2022",
+ "timestampMillis": "1670742697445",
+ "status": {
+  "cmdId": "b9ac526a-d7f4-455e-ac15-71255999818f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Dec 11 15:11:43 2022",
+ "timestampMillis": "1670742703871",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "hls_recv_krnl",
+     "file": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/hls_recv_krnl.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2020.2. SW Build (by xbuild) on 2020-11-18-05:13:29"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 11 15:11:43 2022",
+ "timestampMillis": "1670742703876",
+ "buildStep": {
+  "cmdId": "38460c02-c2fc-4cb1-b82f-d65e318b4c2d",
+  "name": "vitis_hls",
+  "logFile": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/vitis_hls.log",
+  "commandLine": "vitis_hls -f /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/hls_recv_krnl.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/hls_recv_krnl.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 11 15:11:43 2022",
+ "timestampMillis": "1670742703877",
+ "status": {
+  "cmdId": "38460c02-c2fc-4cb1-b82f-d65e318b4c2d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193414",
+ "status": {
+  "cmdId": "38460c02-c2fc-4cb1-b82f-d65e318b4c2d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193442",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/hls_recv_krnl/solution/.autopilot/db/hls_recv_krnl.design.xml",
+  "name": "hls_recv_krnl",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193442",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/hls_recv_krnl/solution/.autopilot/db/.message_syn.xml",
+  "name": "hls_recv_krnl",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193443",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl/hls_reports/hls_recv_krnl_csynth.rpt",
+  "name": "hls_recv_krnl",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193444",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl/hls_recv_krnl/solution/syn/report/hls_recv_krnl_csynth.xml",
+  "name": "hls_recv_krnl",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:53 2022",
+ "timestampMillis": "1670743193462",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl/system_estimate_hls_recv_krnl.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:54 2022",
+ "timestampMillis": "1670743194015",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/reports/hls_recv_krnl/v++_compile_hls_recv_krnl_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 11 15:19:54 2022",
+ "timestampMillis": "1670743194016",
+ "report": {
+  "path": "/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/v++_compile_hls_recv_krnl_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 11 15:19:54 2022",
+ "timestampMillis": "1670743194017",
+ "status": {
+  "cmdId": "b9ac526a-d7f4-455e-ac15-71255999818f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

@@ -1,0 +1,126 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec 11 15:19:53 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             hls_recv_krnl
+Target Device:           xilinx:u250:gen3x16_xdma_3_1:202020.1
+Target Clock:            200MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name    Type  Target              OpenCL Library  Compute Units
+-------------  ----  ------------------  --------------  -------------
+hls_recv_krnl  c     fpga0:OCL_REGION_0  hls_recv_krnl   1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     hls_recv_krnl
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit     Kernel Name    Module Name                              Target Frequency  Estimated Frequency
+---------------  -------------  ---------------------------------------  ----------------  -------------------
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry3                     200               709.723206
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry45                    200               354.861603
+hls_recv_krnl_1  hls_recv_krnl  Block_split11_proc                       200               356.252228
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_entry37                      200               349.283966
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_Block_split2_proc            200               742.942078
+hls_recv_krnl_1  hls_recv_krnl  listen_port_handler                      200               682.593811
+hls_recv_krnl_1  hls_recv_krnl  port_status_handler                      200               715.307556
+hls_recv_krnl_1  hls_recv_krnl  listenPorts                              200               349.283966
+hls_recv_krnl_1  hls_recv_krnl  recvData_handshake                       200               354.861603
+hls_recv_krnl_1  hls_recv_krnl  recvData_consumeData                     200               651.890442
+hls_recv_krnl_1  hls_recv_krnl  recvData                                 200               354.861603
+hls_recv_krnl_1  hls_recv_krnl  backgroundclock                          200               273.972595
+hls_recv_krnl_1  hls_recv_krnl  partition_Loop_VITIS_LOOP_71_1_proc2761  200               354.107666
+hls_recv_krnl_1  hls_recv_krnl  partition                                200               354.107666
+hls_recv_krnl_1  hls_recv_krnl  consumetrans                             200               708.215332
+hls_recv_krnl_1  hls_recv_krnl  prepare_sha                              200               354.107666
+hls_recv_krnl_1  hls_recv_krnl  KECCAK_f                                 200               288.350647
+hls_recv_krnl_1  hls_recv_krnl  sha3Digest_32u_s                         200               288.350647
+hls_recv_krnl_1  hls_recv_krnl  mysha                                    200               288.350647
+hls_recv_krnl_1  hls_recv_krnl  consumesha                               200               437.062927
+hls_recv_krnl_1  hls_recv_krnl  prepare_aes                              200               354.987579
+hls_recv_krnl_1  hls_recv_krnl  updateKey                                200               464.900055
+hls_recv_krnl_1  hls_recv_krnl  process_r                                200               631.711975
+hls_recv_krnl_1  hls_recv_krnl  myaes                                    200               357.653778
+hls_recv_krnl_1  hls_recv_krnl  consumeaes                               200               437.062927
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_open_connection              200               716.332336
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_tx                           200               709.723206
+hls_recv_krnl_1  hls_recv_krnl  tie_off_udp                              200               inf
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_close_con                    200               691.562927
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl                            200               273.972595
+
+Latency Information
+Compute Unit     Kernel Name    Module Name                              Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+---------------  -------------  ---------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry3                     0               0              0             0               0 ns             0 ns            0 ns
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry45                    0               0              0             0               0 ns             0 ns            0 ns
+hls_recv_krnl_1  hls_recv_krnl  Block_split11_proc                       0               0              0             0               0 ns             0 ns            0 ns
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_entry37                      0               0              0             0               0 ns             0 ns            0 ns
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_Block_split2_proc            0               0              0             0               0 ns             0 ns            0 ns
+hls_recv_krnl_1  hls_recv_krnl  listen_port_handler                      undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  port_status_handler                      undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  listenPorts                              undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  recvData_handshake                       undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  recvData_consumeData                     undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  recvData                                 undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  backgroundclock                          undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  partition_Loop_VITIS_LOOP_71_1_proc2761  undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  partition                                undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  consumetrans                             undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  prepare_sha                              undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  KECCAK_f                                 12              12             12            12              60.000 ns        60.000 ns       60.000 ns
+hls_recv_krnl_1  hls_recv_krnl  sha3Digest_32u_s                         164             164            164           164             0.820 us         0.820 us        0.820 us
+hls_recv_krnl_1  hls_recv_krnl  mysha                                    undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  consumesha                               undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  prepare_aes                              undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  updateKey                                16              16             16            16              80.000 ns        80.000 ns       80.000 ns
+hls_recv_krnl_1  hls_recv_krnl  process_r                                1               27             27            27              0.135 us         0.135 us        0.135 us
+hls_recv_krnl_1  hls_recv_krnl  myaes                                    undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  consumeaes                               undef           undef          undef         undef           undef            undef           undef
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_open_connection              1               1              1             1               5.000 ns         5.000 ns        5.000 ns
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_tx                           2               2              2             2               10.000 ns        10.000 ns       10.000 ns
+hls_recv_krnl_1  hls_recv_krnl  tie_off_udp                              2               2              2             2               10.000 ns        10.000 ns       10.000 ns
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_close_con                    1               1              1             1               5.000 ns         5.000 ns        5.000 ns
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl                            undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit     Kernel Name    Module Name                              FF     LUT     DSP  BRAM  URAM
+---------------  -------------  ---------------------------------------  -----  ------  ---  ----  ----
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry3                     3      56      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl_entry45                    3      101     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  Block_split11_proc                       3      38      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_entry37                      2      56      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  listenPorts_Block_split2_proc            18     29      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  listen_port_handler                      86     163     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  port_status_handler                      67     118     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  listenPorts                              320    488     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  recvData_handshake                       184    232     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  recvData_consumeData                     150    210     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  recvData                                 531    581     0    1     0
+hls_recv_krnl_1  hls_recv_krnl  backgroundclock                          844    1031    0    0     0
+hls_recv_krnl_1  hls_recv_krnl  partition_Loop_VITIS_LOOP_71_1_proc2761  614    161     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  partition                                615    170     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  consumetrans                             71     139     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  prepare_sha                              237    229     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  KECCAK_f                                 13390  193852  0    0     0
+hls_recv_krnl_1  hls_recv_krnl  sha3Digest_32u_s                         27835  216053  0    0     0
+hls_recv_krnl_1  hls_recv_krnl  mysha                                    27939  216326  0    0     0
+hls_recv_krnl_1  hls_recv_krnl  consumesha                               105    176     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  prepare_aes                              105    223     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  updateKey                                2623   3436    0    0     0
+hls_recv_krnl_1  hls_recv_krnl  process_r                                2692   7492    0    0     0
+hls_recv_krnl_1  hls_recv_krnl  myaes                                    10320  11911   0    0     0
+hls_recv_krnl_1  hls_recv_krnl  consumeaes                               105    176     0    0     0
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_open_connection              3      53      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_tx                           4      74      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  tie_off_udp                              6      81      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  tie_off_tcp_close_con                    3      42      0    0     0
+hls_recv_krnl_1  hls_recv_krnl  hls_recv_krnl                            51075  237929  0    5     0
+-------------------------------------------------------------------------------

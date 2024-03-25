@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vitis HLS Report for 'prepare_sha'
+================================================================
+* Date:           Sun Dec 11 15:17:23 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.824 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_96_1  |        ?|        ?|         8|          8|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       26|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|      203|     -|
+|Register             |        -|      -|      237|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      237|      229|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |cmp_i_i_i_i_fu_144_p2  |      icmp|   0|  0|  20|          32|           1|
+    |ap_block_state1        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3        |        or|   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  26|          35|           4|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ComputeWordCnt_loc_blk_n      |   9|          2|    1|          2|
+    |ComputeWordCnt_loc_out_blk_n  |   9|          2|    1|          2|
+    |ap_NS_fsm                     |  59|         11|    1|         11|
+    |ap_done                       |   9|          2|    1|          2|
+    |endMsgLenStrm_blk_n           |   9|          2|    1|          2|
+    |endMsgLenStrm_din             |  14|          3|    1|          3|
+    |msgLenStrm_blk_n              |   9|          2|    1|          2|
+    |msgStrm_blk_n                 |   9|          2|    1|          2|
+    |msgStrm_din                   |  49|          9|   64|        576|
+    |real_start                    |   9|          2|    1|          2|
+    |s_data_cal_blk_n              |   9|          2|    1|          2|
+    |sha_in_blk_n                  |   9|          2|    1|          2|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 203|         41|   75|        608|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                 |  10|   0|   10|          0|
+    |ap_done_reg               |   1|   0|    1|          0|
+    |cmp_i_i_i_i_reg_257       |   1|   0|    1|          0|
+    |p_Result_1_i_i_i_reg_261  |  32|   0|   32|          0|
+    |p_Result_2_i_i_i_reg_266  |  32|   0|   32|          0|
+    |p_Result_3_i_i_i_reg_271  |  32|   0|   32|          0|
+    |p_Result_4_i_i_i_reg_276  |  32|   0|   32|          0|
+    |p_Result_5_i_i_i_reg_281  |  32|   0|   32|          0|
+    |p_Result_6_i_i_i_reg_286  |  32|   0|   32|          0|
+    |p_Result_7_i_i_i_reg_291  |  32|   0|   32|          0|
+    |start_once_reg            |   1|   0|    1|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 237|   0|  237|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|start_full_n                   |   in|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|start_out                      |  out|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|start_write                    |  out|    1|  ap_ctrl_hs|             prepare_sha|  return value|
+|ComputeWordCnt_loc_dout        |   in|   32|     ap_fifo|      ComputeWordCnt_loc|       pointer|
+|ComputeWordCnt_loc_empty_n     |   in|    1|     ap_fifo|      ComputeWordCnt_loc|       pointer|
+|ComputeWordCnt_loc_read        |  out|    1|     ap_fifo|      ComputeWordCnt_loc|       pointer|
+|ComputeWordCnt_loc_out_din     |  out|   32|     ap_fifo|  ComputeWordCnt_loc_out|       pointer|
+|ComputeWordCnt_loc_out_full_n  |   in|    1|     ap_fifo|  ComputeWordCnt_loc_out|       pointer|
+|ComputeWordCnt_loc_out_write   |  out|    1|     ap_fifo|  ComputeWordCnt_loc_out|       pointer|
+|s_data_cal_dout                |   in|  512|     ap_fifo|              s_data_cal|       pointer|
+|s_data_cal_empty_n             |   in|    1|     ap_fifo|              s_data_cal|       pointer|
+|s_data_cal_read                |  out|    1|     ap_fifo|              s_data_cal|       pointer|
+|endMsgLenStrm_din              |  out|    1|     ap_fifo|           endMsgLenStrm|       pointer|
+|endMsgLenStrm_full_n           |   in|    1|     ap_fifo|           endMsgLenStrm|       pointer|
+|endMsgLenStrm_write            |  out|    1|     ap_fifo|           endMsgLenStrm|       pointer|
+|msgLenStrm_din                 |  out|  128|     ap_fifo|              msgLenStrm|       pointer|
+|msgLenStrm_full_n              |   in|    1|     ap_fifo|              msgLenStrm|       pointer|
+|msgLenStrm_write               |  out|    1|     ap_fifo|              msgLenStrm|       pointer|
+|msgStrm_din                    |  out|   64|     ap_fifo|                 msgStrm|       pointer|
+|msgStrm_full_n                 |   in|    1|     ap_fifo|                 msgStrm|       pointer|
+|msgStrm_write                  |  out|    1|     ap_fifo|                 msgStrm|       pointer|
+|sha_in_din                     |  out|  512|     ap_fifo|                  sha_in|       pointer|
+|sha_in_full_n                  |   in|    1|     ap_fifo|                  sha_in|       pointer|
+|sha_in_write                   |  out|    1|     ap_fifo|                  sha_in|       pointer|
++-------------------------------+-----+-----+------------+------------------------+--------------+
+

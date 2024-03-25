@@ -1,0 +1,519 @@
+# This script segment is generated automatically by AutoPilot
+
+# Memory (RAM/ROM)  definition:
+set ID 215
+set hasByteEnable 0
+set MemName hls_recv_krnl_process_r_decipher_0_3
+set CoreName ap_simcore_mem
+set PortList { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 }
+set DataWd 8
+set AddrRange 256
+set AddrWd 8
+set impl_style distributed
+set TrueReset 0
+set IsROM 1
+set ROMData { "01010010" "00001001" "01101010" "11010101" "00110000" "00110110" "10100101" "00111000" "10111111" "01000000" "10100011" "10011110" "10000001" "11110011" "11010111" "11111011" "01111100" "11100011" "00111001" "10000010" "10011011" "00101111" "11111111" "10000111" "00110100" "10001110" "01000011" "01000100" "11000100" "11011110" "11101001" "11001011" "01010100" "01111011" "10010100" "00110010" "10100110" "11000010" "00100011" "00111101" "11101110" "01001100" "10010101" "00001011" "01000010" "11111010" "11000011" "01001110" "00001000" "00101110" "10100001" "01100110" "00101000" "11011001" "00100100" "10110010" "01110110" "01011011" "10100010" "01001001" "01101101" "10001011" "11010001" "00100101" "01110010" "11111000" "11110110" "01100100" "10000110" "01101000" "10011000" "00010110" "11010100" "10100100" "01011100" "11001100" "01011101" "01100101" "10110110" "10010010" "01101100" "01110000" "01001000" "01010000" "11111101" "11101101" "10111001" "11011010" "01011110" "00010101" "01000110" "01010111" "10100111" "10001101" "10011101" "10000100" "10010000" "11011000" "10101011" "00000000" "10001100" "10111100" "11010011" "00001010" "11110111" "11100100" "01011000" "00000101" "10111000" "10110011" "01000101" "00000110" "11010000" "00101100" "00011110" "10001111" "11001010" "00111111" "00001111" "00000010" "11000001" "10101111" "10111101" "00000011" "00000001" "00010011" "10001010" "01101011" "00111010" "10010001" "00010001" "01000001" "01001111" "01100111" "11011100" "11101010" "10010111" "11110010" "11001111" "11001110" "11110000" "10110100" "11100110" "01110011" "10010110" "10101100" "01110100" "00100010" "11100111" "10101101" "00110101" "10000101" "11100010" "11111001" "00110111" "11101000" "00011100" "01110101" "11011111" "01101110" "01000111" "11110001" "00011010" "01110001" "00011101" "00101001" "11000101" "10001001" "01101111" "10110111" "01100010" "00001110" "10101010" "00011000" "10111110" "00011011" "11111100" "01010110" "00111110" "01001011" "11000110" "11010010" "01111001" "00100000" "10011010" "11011011" "11000000" "11111110" "01111000" "11001101" "01011010" "11110100" "00011111" "11011101" "10101000" "00110011" "10001000" "00000111" "11000111" "00110001" "10110001" "00010010" "00010000" "01011001" "00100111" "10000000" "11101100" "01011111" "01100000" "01010001" "01111111" "10101001" "00011001" "10110101" "01001010" "00001101" "00101101" "11100101" "01111010" "10011111" "10010011" "11001001" "10011100" "11101111" "10100000" "11100000" "00111011" "01001101" "10101110" "00101010" "11110101" "10110000" "11001000" "11101011" "10111011" "00111100" "10000011" "01010011" "10011001" "01100001" "00010111" "00101011" "00000100" "01111110" "10111010" "01110111" "11010110" "00100110" "11100001" "01101001" "00010100" "01100011" "01010101" "00100001" "00001100" "01111101" }
+set HasInitializer 1
+set Initializer $ROMData
+set NumOfStage 2
+set MaxLatency -1
+set DelayBudget 0.626
+set ClkPeriod 5
+set RegisteredInput 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
+    eval "ap_gen_simcore_mem { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 224 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+} else {
+    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+  ::AP::rtl_comp_handler $MemName
+}
+
+
+set CoreName ROM_nP_LUTRAM
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 224 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+  } else {
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
+  }
+}
+
+
+# Memory (RAM/ROM)  definition:
+set ID 216
+set hasByteEnable 0
+set MemName hls_recv_krnl_process_r_decipher_0_1
+set CoreName ap_simcore_mem
+set PortList { 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 }
+set DataWd 32
+set AddrRange 256
+set AddrWd 8
+set impl_style distributed
+set TrueReset 0
+set IsROM 1
+set ROMData { "00000000000000000000000000000000" "00001110000011010000101100001001" "00011100000110100001011000010010" "00010010000101110001110100011011" "00111000001101000010110000100100" "00110110001110010010011100101101" "00100100001011100011101000110110" "00101010001000110011000100111111" "01110000011010000101100001001000" "01111110011001010101001101000001" "01101100011100100100111001011010" "01100010011111110100010101010011" "01001000010111000111010001101100" "01000110010100010111111101100101" "01010100010001100110001001111110" "01011010010010110110100101110111" "11100000110100001011000010010000" "11101110110111011011101110011001" "11111100110010101010011010000010" "11110010110001111010110110001011" "11011000111001001001110010110100" "11010110111010011001011110111101" "11000100111111101000101010100110" "11001010111100111000000110101111" "10010000101110001110100011011000" "10011110101101011110001111010001" "10001100101000101111111011001010" "10000010101011111111010111000011" "10101000100011001100010011111100" "10100110100000011100111111110101" "10110100100101101101001011101110" "10111010100110111101100111100111" "11011011101110110111101100111011" "11010101101101100111000000110010" "11000111101000010110110100101001" "11001001101011000110011000100000" "11100011100011110101011100011111" "11101101100000100101110000010110" "11111111100101010100000100001101" "11110001100110000100101000000100" "10101011110100110010001101110011" "10100101110111100010100001111010" "10110111110010010011010101100001" "10111001110001000011111001101000" "10010011111001110000111101010111" "10011101111010100000010001011110" "10001111111111010001100101000101" "10000001111100000001001001001100" "00111011011010111100101110101011" "00110101011001101100000010100010" "00100111011100011101110110111001" "00101001011111001101011010110000" "00000011010111111110011110001111" "00001101010100101110110010000110" "00011111010001011111000110011101" "00010001010010001111101010010100" "01001011000000111001001111100011" "01000101000011101001100011101010" "01010111000110011000010111110001" "01011001000101001000111011111000" "01110011001101111011111111000111" "01111101001110101011010011001110" "01101111001011011010100111010101" "01100001001000001010001011011100" "10101101011011011111011001110110" "10100011011000001111110101111111" "10110001011101111110000001100100" "10111111011110101110101101101101" "10010101010110011101101001010010" "10011011010101001101000101011011" "10001001010000111100110001000000" "10000111010011101100011101001001" "11011101000001011010111000111110" "11010011000010001010010100110111" "11000001000111111011100000101100" "11001111000100101011001100100101" "11100101001100011000001000011010" "11101011001111001000100100010011" "11111001001010111001010000001000" "11110111001001101001111100000001" "01001101101111010100011011100110" "01000011101100000100110111101111" "01010001101001110101000011110100" "01011111101010100101101111111101" "01110101100010010110101011000010" "01111011100001000110000111001011" "01101001100100110111110011010000" "01100111100111100111011111011001" "00111101110101010001111010101110" "00110011110110000001010110100111" "00100001110011110000100010111100" "00101111110000100000001110110101" "00000101111000010011001010001010" "00001011111011000011100110000011" "00011001111110110010010010011000" "00010111111101100010111110010001" "01110110110101101000110101001101" "01111000110110111000011001000100" "01101010110011001001101101011111" "01100100110000011001000001010110" "01001110111000101010000101101001" "01000000111011111010101001100000" "01010010111110001011011101111011" "01011100111101011011110001110010" "00000110101111101101010100000101" "00001000101100111101111000001100" "00011010101001001100001100010111" "00010100101010011100100000011110" "00111110100010101111100100100001" "00110000100001111111001000101000" "00100010100100001110111100110011" "00101100100111011110010000111010" "10010110000001100011110111011101" "10011000000010110011011011010100" "10001010000111000010101111001111" "10000100000100010010000011000110" "10101110001100100001000111111001" "10100000001111110001101011110000" "10110010001010000000011111101011" "10111100001001010000110011100010" "11100110011011100110010110010101" "11101000011000110110111010011100" "11111010011101000111001110000111" "11110100011110010111100010001110" "11011110010110100100100110110001" "11010000010101110100001010111000" "11000010010000000101111110100011" "11001100010011010101010010101010" "01000001110110101111011111101100" "01001111110101111111110011100101" "01011101110000001110000111111110" "01010011110011011110101011110111" "01111001111011101101101111001000" "01110111111000111101000011000001" "01100101111101001100110111011010" "01101011111110011100011011010011" "00110001101100101010111110100100" "00111111101111111010010010101101" "00101101101010001011100110110110" "00100011101001011011001010111111" "00001001100001101000001110000000" "00000111100010111000100010001001" "00010101100111001001010110010010" "00011011100100011001111010011011" "10100001000010100100011101111100" "10101111000001110100110001110101" "10111101000100000101000101101110" "10110011000111010101101001100111" "10011001001111100110101101011000" "10010111001100110110000001010001" "10000101001001000111110101001010" "10001011001010010111011001000011" "11010001011000100001111100110100" "11011111011011110001010000111101" "11001101011110000000100100100110" "11000011011101010000001000101111" "11101001010101100011001100010000" "11100111010110110011100000011001" "11110101010011000010010100000010" "11111011010000010010111000001011" "10011010011000011000110011010111" "10010100011011001000011111011110" "10000110011110111001101011000101" "10001000011101101001000111001100" "10100010010101011010000011110011" "10101100010110001010101111111010" "10111110010011111011011011100001" "10110000010000101011110111101000" "11101010000010011101010010011111" "11100100000001001101111110010110" "11110110000100111100001010001101" "11111000000111101100100110000100" "11010010001111011111100010111011" "11011100001100001111001110110010" "11001110001001111110111010101001" "11000000001010101110010110100000" "01111010101100010011110001000111" "01110100101111000011011101001110" "01100110101010110010101001010101" "01101000101001100010000101011100" "01000010100001010001000001100011" "01001100100010000001101101101010" "01011110100111110000011001110001" "01010000100100100000110101111000" "00001010110110010110010000001111" "00000100110101000110111100000110" "00010110110000110111001000011101" "00011000110011100111100100010100" "00110010111011010100100000101011" "00111100111000000100001100100010" "00101110111101110101111000111001" "00100000111110100101010100110000" "11101100101101110000000110011010" "11100010101110100000101010010011" "11110000101011010001011110001000" "11111110101000000001110010000001" "11010100100000110010110110111110" "11011010100011100010011010110111" "11001000100110010011101110101100" "11000110100101000011000010100101" "10011100110111110101100111010010" "10010010110100100101001011011011" "10000000110001010100111111000000" "10001110110010000100010011001001" "10100100111010110111010111110110" "10101010111001100111111011111111" "10111000111100010110001111100100" "10110110111111000110100011101101" "00001100011001111011000100001010" "00000010011010101011101000000011" "00010000011111011010011100011000" "00011110011100001010110000010001" "00110100010100111001110100101110" "00111010010111101001011000100111" "00101000010010011000101100111100" "00100110010001001000000000110101" "01111100000011111110100101000010" "01110010000000101110001001001011" "01100000000101011111111101010000" "01101110000110001111010001011001" "01000100001110111100010101100110" "01001010001101101100111001101111" "01011000001000011101001101110100" "01010110001011001101100001111101" "00110111000011000111101010100001" "00111001000000010111000110101000" "00101011000101100110110010110011" "00100101000110110110011110111010" "00001111001110000101011010000101" "00000001001101010101110110001100" "00010011001000100100000010010111" "00011101001011110100101110011110" "01000111011001000010001011101001" "01001001011010010010100111100000" "01011011011111100011010011111011" "01010101011100110011111111110010" "01111111010100000000111011001101" "01110001010111010000010111000100" "01100011010010100001100011011111" "01101101010001110001001111010110" "11010111110111001100101000110001" "11011001110100011100000100111000" "11001011110001101101110000100011" "11000101110010111101011100101010" "11101111111010001110011000010101" "11100001111001011110110100011100" "11110011111100101111000000000111" "11111101111111111111101100001110" "10100111101101001001001001111001" "10101001101110011001100101110000" "10111011101011101000010001101011" "10110101101000111000111101100010" "10011111100000001011111001011101" "10010001100011011011010101010100" "10000011100110101010100001001111" "10001101100101111010001101000110" }
+set HasInitializer 1
+set Initializer $ROMData
+set NumOfStage 2
+set MaxLatency -1
+set DelayBudget 0.657
+set ClkPeriod 5
+set RegisteredInput 0
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
+    eval "ap_gen_simcore_mem { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 208 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+} else {
+    puts "@W \[IMPL-102\] Cannot find ap_gen_simcore_mem, check your platform lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+  ::AP::rtl_comp_handler $MemName
+}
+
+
+set CoreName ROM_nP_LUTRAM
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_ROM"} {
+    eval "::AESL_LIB_VIRTEX::xil_gen_ROM { \
+    id ${ID} \
+    name ${MemName} \
+    corename ${CoreName}  \
+    op mem \
+    hasByteEnable ${hasByteEnable} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${NumOfStage}  \
+    registered_input ${RegisteredInput} \
+    port_num 208 \
+    port_list \{${PortList}\} \
+    data_wd ${DataWd} \
+    addr_wd ${AddrWd} \
+    addr_range ${AddrRange} \
+    style ${impl_style} \
+    true_reset ${TrueReset} \
+    delay_budget ${DelayBudget} \
+    clk_period ${ClkPeriod} \
+    HasInitializer ${HasInitializer} \
+    rom_data \{${ROMData}\} \
+ } "
+  } else {
+    puts "@W \[IMPL-104\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_ROM, check your platform lib"
+  }
+}
+
+
+# clear list
+if {${::AESL::PGuard_autoexp_gen}} {
+    cg_default_interface_gen_dc_begin
+    cg_default_interface_gen_bundle_begin
+    AESL_LIB_XILADAPTER::native_axis_begin
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 217 \
+    name p_read \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read \
+    op interface \
+    ports { p_read { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 218 \
+    name p_read1 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read1 \
+    op interface \
+    ports { p_read1 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 219 \
+    name p_read2 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read2 \
+    op interface \
+    ports { p_read2 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 220 \
+    name p_read3 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read3 \
+    op interface \
+    ports { p_read3 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 221 \
+    name p_read4 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read4 \
+    op interface \
+    ports { p_read4 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 222 \
+    name p_read5 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read5 \
+    op interface \
+    ports { p_read5 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 223 \
+    name p_read6 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read6 \
+    op interface \
+    ports { p_read6 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 224 \
+    name p_read7 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read7 \
+    op interface \
+    ports { p_read7 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 225 \
+    name p_read8 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read8 \
+    op interface \
+    ports { p_read8 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 226 \
+    name p_read9 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read9 \
+    op interface \
+    ports { p_read9 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 227 \
+    name p_read10 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read10 \
+    op interface \
+    ports { p_read10 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 228 \
+    name p_read11 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read11 \
+    op interface \
+    ports { p_read11 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 229 \
+    name p_read12 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read12 \
+    op interface \
+    ports { p_read12 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 230 \
+    name p_read13 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read13 \
+    op interface \
+    ports { p_read13 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 231 \
+    name p_read14 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_read14 \
+    op interface \
+    ports { p_read14 { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 232 \
+    name ciphertext \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_ciphertext \
+    op interface \
+    ports { ciphertext { I 128 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id -1 \
+    name ap_ctrl \
+    type ap_ctrl \
+    reset_level 1 \
+    sync_rst true \
+    corename ap_ctrl \
+    op interface \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id -2 \
+    name ap_return \
+    type ap_return \
+    reset_level 1 \
+    sync_rst true \
+    corename ap_return \
+    op interface \
+    ports { ap_return { O 128 vector } } \
+} "
+}
+
+
+# Adapter definition:
+set PortName ap_clk
+set DataWd 1 
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
+eval "cg_default_interface_gen_clock { \
+    id -3 \
+    name ${PortName} \
+    reset_level 1 \
+    sync_rst true \
+    corename apif_ap_clk \
+    data_wd ${DataWd} \
+    op interface \
+}"
+} else {
+puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored generation of bus interface for '${PortName}'"
+}
+}
+
+
+# Adapter definition:
+set PortName ap_rst
+set DataWd 1 
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
+eval "cg_default_interface_gen_reset { \
+    id -4 \
+    name ${PortName} \
+    reset_level 1 \
+    sync_rst true \
+    corename apif_ap_rst \
+    data_wd ${DataWd} \
+    op interface \
+}"
+} else {
+puts "@W \[IMPL-114\] Cannot find bus interface model in the library. Ignored generation of bus interface for '${PortName}'"
+}
+}
+
+
+# Adapter definition:
+set PortName ap_ce
+set DataWd 1 
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc cg_default_interface_gen_ce] == "cg_default_interface_gen_ce"} {
+eval "cg_default_interface_gen_ce { \
+    id -5 \
+    name ${PortName} \
+    reset_level 1 \
+    sync_rst true \
+    corename apif_ap_ce \
+    data_wd ${DataWd} \
+    op interface \
+}"
+} else {
+puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored generation of bus interface for '${PortName}'"
+}
+}
+
+
+
+# merge
+if {${::AESL::PGuard_autoexp_gen}} {
+    cg_default_interface_gen_dc_end
+    cg_default_interface_gen_bundle_end
+    AESL_LIB_XILADAPTER::native_axis_end
+}
+
+

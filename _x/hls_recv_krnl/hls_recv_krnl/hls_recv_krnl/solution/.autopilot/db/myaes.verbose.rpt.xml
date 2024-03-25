@@ -1,0 +1,317 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'myaes'" level="0">
+<item name = "Date">Sun Dec 11 15:18:31 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">hls_recv_krnl</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 2.796 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_process_r_fu_264">process_r, 27, 27, 0.135 us, 0.135 us, 1, 1, yes</column>
+<column name="grp_updateKey_fu_289">updateKey, 16, 16, 80.000 ns, 80.000 ns, 16, 16, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- decryption_cbc_loop">?, ?, 29, 1, 1, ?, yes</column>
+<column name="- VITIS_LOOP_183_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + decryption_cbc_loop">?, ?, 29, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 383, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, -, 5315, 10928, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 504, -</column>
+<column name="Register">-, -, 5005, 96, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, 1, 2, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_process_r_fu_264">process_r, 0, 0, 2692, 7492, 0</column>
+<column name="grp_updateKey_fu_289">updateKey, 0, 0, 2623, 3436, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln878_fu_498_p2">+, 0, 0, 39, 32, 1</column>
+<column name="sub_i_i_i_i_fu_492_p2">+, 0, 0, 40, 33, 2</column>
+<column name="ap_block_state35_pp1_stage0_iter0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state36_pp1_stage0_iter1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state4_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln878_fu_508_p2">icmp, 0, 0, 20, 33, 33</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp1_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state31_pp0_stage0_iter28">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state32">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state33">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state63_pp1_stage0_iter28">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_pp1">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+<column name="ret_2_fu_652_p2">xor, 0, 0, 128, 128, 128</column>
+<column name="ret_fu_482_p2">xor, 0, 0, 128, 128, 128</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ComputeWordCnt_loc_blk_n">9, 2, 1, 2</column>
+<column name="ComputeWordCnt_loc_out_blk_n">9, 2, 1, 2</column>
+<column name="IVStrm_blk_n">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">49, 9, 1, 9</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter28">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp1_iter27">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp1_iter28">14, 3, 1, 3</column>
+<column name="ap_phi_mux_e_1_phi_fu_226_p4">9, 2, 1, 2</column>
+<column name="ap_phi_mux_e_4_phi_fu_247_p4">9, 2, 1, 2</column>
+<column name="cipherkeyStrm_blk_n">9, 2, 1, 2</column>
+<column name="ciphertextStrm_blk_n">9, 2, 1, 2</column>
+<column name="e_1_reg_223">9, 2, 1, 2</column>
+<column name="e_4_reg_244">9, 2, 1, 2</column>
+<column name="endCiphertextStrm_blk_n">9, 2, 1, 2</column>
+<column name="endPlaintextStrm_blk_n">9, 2, 1, 2</column>
+<column name="endPlaintextStrm_din">14, 3, 1, 3</column>
+<column name="feedback_r_V_6_reg_254">9, 2, 128, 256</column>
+<column name="feedback_r_V_reg_213">9, 2, 128, 256</column>
+<column name="grp_updateKey_fu_289_p_read1">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read10">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read11">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read12">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read13">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read14">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read15">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read2">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read3">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read4">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read5">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read6">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read7">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read8">14, 3, 128, 384</column>
+<column name="grp_updateKey_fu_289_p_read9">14, 3, 128, 384</column>
+<column name="i_V_reg_233">9, 2, 32, 64</column>
+<column name="plaintextStrm_blk_n">9, 2, 1, 2</column>
+<column name="plaintextStrm_din">14, 3, 128, 384</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="timeaes_blk_n">9, 2, 1, 2</column>
+<column name="timeaes_din">14, 3, 32, 96</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ComputeWordCnt_loc_read_reg_659">32, 0, 32, 0</column>
+<column name="add_ln878_reg_769">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter12">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter13">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter14">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter15">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter16">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter17">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter18">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter19">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter20">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter21">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter22">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter23">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter24">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter25">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter26">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter27">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter28">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter12">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter13">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter14">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter15">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter16">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter17">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter18">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter19">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter20">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter21">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter22">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter23">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter24">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter25">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter26">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter27">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter28">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp1_iter9">1, 0, 1, 0</column>
+<column name="decipher_key_list_V_10_2_fu_126">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_11_2_fu_130">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_12_2_fu_134">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_13_2_fu_138">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_14_2_fu_142">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_15_1_fu_146">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_1_2_fu_90">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_2_2_fu_94">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_3_2_fu_98">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_4_2_fu_102">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_5_2_fu_106">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_6_2_fu_110">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_7_2_fu_114">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_8_2_fu_118">128, 0, 128, 0</column>
+<column name="decipher_key_list_V_9_2_fu_122">128, 0, 128, 0</column>
+<column name="e_1_reg_223">1, 0, 1, 0</column>
+<column name="e_4_reg_244">1, 0, 1, 0</column>
+<column name="feedback_r_V_6_reg_254">128, 0, 128, 0</column>
+<column name="feedback_r_V_reg_213">128, 0, 128, 0</column>
+<column name="grp_process_r_fu_264_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_updateKey_fu_289_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_V_reg_233">32, 0, 32, 0</column>
+<column name="reg_389">256, 0, 256, 0</column>
+<column name="reg_394">128, 0, 128, 0</column>
+<column name="reg_400">128, 0, 128, 0</column>
+<column name="reg_405">128, 0, 128, 0</column>
+<column name="reg_410">128, 0, 128, 0</column>
+<column name="reg_415">128, 0, 128, 0</column>
+<column name="reg_420">128, 0, 128, 0</column>
+<column name="reg_425">128, 0, 128, 0</column>
+<column name="reg_430">128, 0, 128, 0</column>
+<column name="reg_435">128, 0, 128, 0</column>
+<column name="reg_440">128, 0, 128, 0</column>
+<column name="reg_445">128, 0, 128, 0</column>
+<column name="reg_450">128, 0, 128, 0</column>
+<column name="reg_455">128, 0, 128, 0</column>
+<column name="reg_460">128, 0, 128, 0</column>
+<column name="reg_465">128, 0, 128, 0</column>
+<column name="reg_470">128, 0, 128, 0</column>
+<column name="reg_475">128, 0, 128, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="sub_i_i_i_i_reg_764">33, 0, 33, 0</column>
+<column name="tmp_14_reg_664">1, 0, 1, 0</column>
+<column name="tmp_16_reg_669">1, 0, 1, 0</column>
+<column name="tmp_19_reg_822">1, 0, 1, 0</column>
+<column name="tmp_21_reg_827">1, 0, 1, 0</column>
+<column name="e_1_reg_223">64, 32, 1, 0</column>
+<column name="e_4_reg_244">64, 32, 1, 0</column>
+<column name="reg_475">64, 32, 128, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, myaes, return value</column>
+<column name="ciphertextStrm_dout">in, 128, ap_fifo, ciphertextStrm, pointer</column>
+<column name="ciphertextStrm_empty_n">in, 1, ap_fifo, ciphertextStrm, pointer</column>
+<column name="ciphertextStrm_read">out, 1, ap_fifo, ciphertextStrm, pointer</column>
+<column name="endCiphertextStrm_dout">in, 1, ap_fifo, endCiphertextStrm, pointer</column>
+<column name="endCiphertextStrm_empty_n">in, 1, ap_fifo, endCiphertextStrm, pointer</column>
+<column name="endCiphertextStrm_read">out, 1, ap_fifo, endCiphertextStrm, pointer</column>
+<column name="cipherkeyStrm_dout">in, 256, ap_fifo, cipherkeyStrm, pointer</column>
+<column name="cipherkeyStrm_empty_n">in, 1, ap_fifo, cipherkeyStrm, pointer</column>
+<column name="cipherkeyStrm_read">out, 1, ap_fifo, cipherkeyStrm, pointer</column>
+<column name="IVStrm_dout">in, 128, ap_fifo, IVStrm, pointer</column>
+<column name="IVStrm_empty_n">in, 1, ap_fifo, IVStrm, pointer</column>
+<column name="IVStrm_read">out, 1, ap_fifo, IVStrm, pointer</column>
+<column name="plaintextStrm_din">out, 128, ap_fifo, plaintextStrm, pointer</column>
+<column name="plaintextStrm_full_n">in, 1, ap_fifo, plaintextStrm, pointer</column>
+<column name="plaintextStrm_write">out, 1, ap_fifo, plaintextStrm, pointer</column>
+<column name="endPlaintextStrm_din">out, 1, ap_fifo, endPlaintextStrm, pointer</column>
+<column name="endPlaintextStrm_full_n">in, 1, ap_fifo, endPlaintextStrm, pointer</column>
+<column name="endPlaintextStrm_write">out, 1, ap_fifo, endPlaintextStrm, pointer</column>
+<column name="timeaes_din">out, 32, ap_fifo, timeaes, pointer</column>
+<column name="timeaes_full_n">in, 1, ap_fifo, timeaes, pointer</column>
+<column name="timeaes_write">out, 1, ap_fifo, timeaes, pointer</column>
+<column name="ComputeWordCnt_loc_dout">in, 32, ap_fifo, ComputeWordCnt_loc, pointer</column>
+<column name="ComputeWordCnt_loc_empty_n">in, 1, ap_fifo, ComputeWordCnt_loc, pointer</column>
+<column name="ComputeWordCnt_loc_read">out, 1, ap_fifo, ComputeWordCnt_loc, pointer</column>
+<column name="ComputeWordCnt_loc_out_din">out, 32, ap_fifo, ComputeWordCnt_loc_out, pointer</column>
+<column name="ComputeWordCnt_loc_out_full_n">in, 1, ap_fifo, ComputeWordCnt_loc_out, pointer</column>
+<column name="ComputeWordCnt_loc_out_write">out, 1, ap_fifo, ComputeWordCnt_loc_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670743041913">
+  <ports id="1" name="expectedRxByteCnt" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="64" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="ComputeWordCnt_out_out" type="PortType" coreName="FIFO_SRL" coreId="193" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="12" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="15" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="22" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.1"/>
+  <edges id="23" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <blocks id="9" name="Block_.split11_proc" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="expectedRxByteCnt_read" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="64" opcode="read" m_display="0" m_delay="1.4" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>expectedRxByteCnt</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="ComputeWordCnt" lineNumber="406" originalName="ComputeWordCnt" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." rtlName="ComputeWordCnt_out_out_din" coreId="1634047432" contextFuncName="hls_recv_krnl" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="406" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="ComputeWordCnt_out_out_write_ln406" lineNumber="406" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="hls_recv_krnl" opcode="write" m_display="0" m_delay="1.39" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="406" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>ComputeWordCnt_out_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln333" lineNumber="333" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="1701999731" contextFuncName="hls_recv_krnl" opcode="ret" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="333" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+      <validLinenumbers>406</validLinenumbers>
+      <validLinenumbers>333</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="ComputeWordCnt_fu_41">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="write_ln406_write_fu_34">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="expectedRxByteCnt_read_read_fu_28">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioPorts name="ComputeWordCnt_out_out">
+    <contents name="write">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="expectedRxByteCnt">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Block_split11_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

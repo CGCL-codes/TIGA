@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vitis HLS Report for 'listenPorts'
+================================================================
+* Date:           Sun Dec 11 15:14:47 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.863 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%useConn_c8_i = alloca i64 1" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 5 'alloca' 'useConn_c8_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%useConn_c_i = alloca i64 1" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 6 'alloca' 'useConn_c_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.46> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%basePort_c_i = alloca i64 1" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 7 'alloca' 'basePort_c_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%call_ln760 = call void @listenPorts.entry37, i32 %basePort, i32 %useConn, i16 %basePort_c_i, i32 %useConn_c_i, i32 %useConn_c8_i" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 8 'call' 'call_ln760' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%basePort_cast_loc_i_channel = call i16 @listenPorts_Block_.split2_proc, i16 %basePort_c_i" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 9 'call' 'basePort_cast_loc_i_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.34> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_2 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln769 = call void @listen_port_handler, i16 %basePort_cast_loc_i_channel, i32 %useConn_c_i, i16 %m_axis_tcp_listen_port_V_data_V, i2 %m_axis_tcp_listen_port_V_keep_V, i2 %m_axis_tcp_listen_port_V_strb_V, i1 %m_axis_tcp_listen_port_V_last_V" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:769]   --->   Operation 10 'call' 'call_ln769' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln770 = call void @port_status_handler, i32 %useConn_c8_i, i8 %s_axis_tcp_port_status_V_data_V, i1 %s_axis_tcp_port_status_V_keep_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_last_V" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:770]   --->   Operation 11 'call' 'call_ln770' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 12 [1/2] (0.00ns)   --->   "%call_ln769 = call void @listen_port_handler, i16 %basePort_cast_loc_i_channel, i32 %useConn_c_i, i16 %m_axis_tcp_listen_port_V_data_V, i2 %m_axis_tcp_listen_port_V_keep_V, i2 %m_axis_tcp_listen_port_V_strb_V, i1 %m_axis_tcp_listen_port_V_last_V" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:769]   --->   Operation 12 'call' 'call_ln769' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln770 = call void @port_status_handler, i32 %useConn_c8_i, i8 %s_axis_tcp_port_status_V_data_V, i1 %s_axis_tcp_port_status_V_keep_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_last_V" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:770]   --->   Operation 13 'call' 'call_ln770' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_tcp_listen_port_V_last_V, i2 %m_axis_tcp_listen_port_V_strb_V, i2 %m_axis_tcp_listen_port_V_keep_V, i16 %m_axis_tcp_listen_port_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_tcp_listen_port_V_last_V, i2 %m_axis_tcp_listen_port_V_strb_V, i2 %m_axis_tcp_listen_port_V_keep_V, i16 %m_axis_tcp_listen_port_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_tcp_listen_port_V_last_V, i2 %m_axis_tcp_listen_port_V_strb_V, i2 %m_axis_tcp_listen_port_V_keep_V, i16 %m_axis_tcp_listen_port_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_tcp_listen_port_V_last_V, i2 %m_axis_tcp_listen_port_V_strb_V, i2 %m_axis_tcp_listen_port_V_keep_V, i16 %m_axis_tcp_listen_port_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_tcp_port_status_V_last_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_keep_V, i8 %s_axis_tcp_port_status_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_tcp_port_status_V_last_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_keep_V, i8 %s_axis_tcp_port_status_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_tcp_port_status_V_last_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_keep_V, i8 %s_axis_tcp_port_status_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_tcp_port_status_V_last_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_keep_V, i8 %s_axis_tcp_port_status_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %useConn, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %basePort, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_14"   --->   Operation 24 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_tcp_port_status_V_last_V, i1 %s_axis_tcp_port_status_V_strb_V, i1 %s_axis_tcp_port_status_V_keep_V, i8 %s_axis_tcp_port_status_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %m_axis_tcp_listen_port_V_last_V, i2 %m_axis_tcp_listen_port_V_strb_V, i2 %m_axis_tcp_listen_port_V_keep_V, i16 %m_axis_tcp_listen_port_V_data_V, void @empty_30, i32 1, i32 1, void @empty_9, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @basePort_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %basePort_c_i, i16 %basePort_c_i" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 27 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln760 = specinterface void @_ssdm_op_SpecInterface, i16 %basePort_c_i, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 28 'specinterface' 'specinterface_ln760' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%empty_70 = specchannel i32 @_ssdm_op_SpecChannel, void @useConn_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %useConn_c_i, i32 %useConn_c_i" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 29 'specchannel' 'empty_70' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln760 = specinterface void @_ssdm_op_SpecInterface, i32 %useConn_c_i, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 30 'specinterface' 'specinterface_ln760' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%empty_71 = specchannel i32 @_ssdm_op_SpecChannel, void @useConn_c8_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %useConn_c8_i, i32 %useConn_c8_i" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 31 'specchannel' 'empty_71' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln760 = specinterface void @_ssdm_op_SpecInterface, i32 %useConn_c8_i, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str" [/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/common/include/communication.hpp:760]   --->   Operation 32 'specinterface' 'specinterface_ln760' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 33 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1670743093393">
+  <ports id="1" name="ComputeWordCnt_loc" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="endDigestStrm" type="PortType" coreName="FIFO_SRL" coreId="68" bitwidth="1" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="digestStrm" type="PortType" coreName="FIFO_SRL" coreId="1768712536" bitwidth="256" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="48" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="49" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="52" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="53" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="54" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="55" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="58" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="60" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="61" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="62" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="65" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="66" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="67" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="70" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="72" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="73" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="76" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="78" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="79" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="365" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="367" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="369" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="371" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="372" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <blocks id="23" name="entry" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="ComputeWordCnt_loc_read" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" bitwidth="32" opcode="read" m_display="0" m_delay="1.39" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>ComputeWordCnt_loc</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln135" lineNumber="135" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="consumesha" opcode="br" m_display="0" m_delay="0.38" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="135" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="consumesha"/>
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="429" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+      <controlInputObjs>block_28</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+      <validLinenumbers>135</validLinenumbers>
+      <validLinenumbers>429</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="28" name="block_28" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>block_43</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.exit</controlOutputObjs>
+    <controlOutputObjs>.split.i.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="i_V" originalName="i.V" coreId="0" bitwidth="32" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>block_43</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i_V_3" lineNumber="691" originalName="i.V" fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="i_V_3_fu_81_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.88" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="691" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="icmp_ln878" lineNumber="878" fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln878_fu_87_p2" opType="icmp" coreId="106" contextFuncName="operator_lt_32_false" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h" linenumber="878" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="operator&amp;lt;&amp;lt;32, false&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln135" lineNumber="135" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="52" contextFuncName="consumesha" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="135" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="consumesha"/>
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="429" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split.i.i.i</controlInputObjs>
+      <controlInputObjs>.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+      <validLinenumbers>135</validLinenumbers>
+      <validLinenumbers>429</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>691</validLinenumbers>
+      <validLinenumbers>878</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="32" name=".split.i.i.i" type="BlockType">
+    <controlInputObjs>block_28</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_36</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp" lineNumber="145" originalName="tmp" fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read" bitwidth="1" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.42" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="read"/>
+      <dataInputObjs>endDigestStrm</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln138" lineNumber="138" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="161" contextFuncName="consumesha" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.38" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="138" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="consumesha"/>
+      <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="429" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+      <controlInputObjs>block_36</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>145</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+      <validLinenumbers>138</validLinenumbers>
+      <validLinenumbers>429</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name="block_43" type="BlockType">
+    <controlInputObjs>block_36</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln0" coreId="49" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_28</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="45" name=".exit" type="BlockType">
+    <controlInputObjs>block_28</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln0" coreId="1654108896" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="116" pipe_depth="2" RegionName="VITIS_LOOP_138_2">
+    <basic_blocks id="36" name="block_36" type="BlockType">
+      <controlInputObjs>.split.i.i.i</controlInputObjs>
+      <controlInputObjs>block_41</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_43</controlOutputObjs>
+      <controlOutputObjs>block_41</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="end_1" originalName="tmp" coreId="2002744169" bitwidth="1" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <controlInputObjs>.split.i.i.i</controlInputObjs>
+        <controlInputObjs>block_41</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln138" lineNumber="138" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="8" contextFuncName="consumesha" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="138" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="consumesha"/>
+        <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="429" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <controlInputObjs>block_41</controlInputObjs>
+        <controlInputObjs>block_43</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+        <validLinenumbers>138</validLinenumbers>
+        <validLinenumbers>429</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="41" name="block_41" type="BlockType">
+      <controlInputObjs>block_36</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_36</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="p_0" lineNumber="145" fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read" bitwidth="256" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.42" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="read"/>
+        <dataInputObjs>digestStrm</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_22" lineNumber="145" originalName="tmp" fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" contextFuncName="read" bitwidth="1" opcode="read" nodeLabel="2.0" m_display="0" m_delay="1.42" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="read"/>
+        <dataInputObjs>endDigestStrm</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln138" lineNumber="138" fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" fileDirectory=".." coreId="1953046628" contextFuncName="consumesha" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="138" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="consumesha"/>
+        <inlineStackInfo fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp" linenumber="429" fileDirectory="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/_x/hls_recv_krnl/hls_recv_krnl" functionName="hls_recv_krnl"/>
+        <controlInputObjs>block_36</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="/space1/Xilinx20202/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/kernel/user_krnl/hls_recv_krnl/src/hls/hls_recv_krnl.cpp">
+        <validLinenumbers>138</validLinenumbers>
+        <validLinenumbers>429</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="tmp_22_reg_111">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="i_V_3_reg_97">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="i_V_reg_60">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="end_1_reg_71">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln878_reg_102">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_106">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="ComputeWordCnt_loc_read_reg_92">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="end_1_phi_fu_74">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_V_3_fu_81">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_V_phi_fu_64">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln878_fu_87">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="grp_read_fu_48">
+    <nodeIds>30</nodeIds>
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ComputeWordCnt_loc_read_read_fu_42">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_0_read_fu_54">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioPorts name="ComputeWordCnt_loc">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="digestStrm">
+    <contents name="read">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="endDigestStrm">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="42" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="consumesha" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>23</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_135_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>28</basicBlocks>
+      <basicBlocks>32</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="VITIS_LOOP_138_2" mII="1" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>36</basicBlocks>
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>43</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>45</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

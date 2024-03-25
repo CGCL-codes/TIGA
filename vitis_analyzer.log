@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vitis Analyzer v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# 
+# Start of session at: Mon Dec 12 09:08:34 2022
+# Process ID: 21587
+# Current directory: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP
+# Command line: vitis_analyzer ./build_dir.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1/network.xclbin.link_summary
+# Log file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vitis_analyzer.log
+# Journal file: /space1/hxh/APB/sha_aes_tcpip/Vitis_with_100Gbps_TCP-IP/vitis_analyzer.jou
+#-----------------------------------------------------------
+start_gui
+create_project dummy

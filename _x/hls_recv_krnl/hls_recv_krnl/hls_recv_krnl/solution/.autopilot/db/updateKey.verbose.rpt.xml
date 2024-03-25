@@ -1,0 +1,263 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'updateKey'" level="0">
+<item name = "Date">Sun Dec 11 15:18:13 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">hls_recv_krnl</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 2.151 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">16, 16, 80.000 ns, 80.000 ns, 16, 16, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_583_1">14, 14, 3, 2, 1, 7, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2146, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 1040, -</column>
+<column name="Memory">0, -, 16, 42, -</column>
+<column name="Multiplexer">-, -, -, 208, -</column>
+<column name="Register">-, -, 2607, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_164_128_1_1_U180">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U181">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U182">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U183">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U184">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U185">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U186">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_128_1_1_U187">mux_164_128_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U172">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U173">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U174">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U175">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U176">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U177">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U178">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_164_1_1_1_U179">mux_164_1_1_1, 0, 0, 0, 65, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="Rcon_U">updateKey_Rcon, 0, 8, 9, 0, 10, 8, 1, 80</column>
+<column name="decipher_0_2_U">updateKey_decipher_0_2, 0, 8, 33, 0, 256, 8, 1, 2048</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln691_fu_934_p2">+, 0, 0, 12, 5, 2</column>
+<column name="ret_fu_720_p2">+, 0, 0, 10, 3, 2</column>
+<column name="icmp_ln878_fu_675_p2">icmp, 0, 0, 9, 5, 4</column>
+<column name="or_ln414_fu_1004_p2">or, 0, 0, 4, 4, 1</column>
+<column name="select_ln613_10_fu_1801_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_11_fu_1808_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_12_fu_1815_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_13_fu_1822_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_14_fu_1829_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_1_fu_1738_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_2_fu_1745_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_3_fu_1752_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_4_fu_1759_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_5_fu_1766_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_6_fu_1773_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_7_fu_1780_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_8_fu_1787_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_9_fu_1794_p3">select, 0, 0, 123, 1, 128</column>
+<column name="select_ln613_fu_1731_p3">select, 0, 0, 123, 1, 128</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ret_1_fu_776_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="round_tmp2_V_1_fu_846_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_1_fu_814_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_2_fu_830_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_4_fu_1345_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_5_fu_1350_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_6_fu_1355_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_7_fu_1360_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln215_fu_798_p2">xor, 0, 0, 32, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">26, 5, 1, 5</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_phi_mux_iter_V_phi_fu_608_p4">9, 2, 5, 10</column>
+<column name="ap_phi_mux_p_Val2_s_phi_fu_619_p4">9, 2, 256, 512</column>
+<column name="decipher_0_2_address0">14, 3, 8, 24</column>
+<column name="decipher_0_2_address1">14, 3, 8, 24</column>
+<column name="decipher_0_2_address2">14, 3, 8, 24</column>
+<column name="decipher_0_2_address3">14, 3, 8, 24</column>
+<column name="iter_V_reg_604">9, 2, 5, 10</column>
+<column name="p_Val2_s_reg_616">9, 2, 256, 512</column>
+<column name="this_116_0_reg_546">9, 2, 128, 256</column>
+<column name="write_flag11_0_reg_498">9, 2, 1, 2</column>
+<column name="write_flag17_0_reg_426">9, 2, 1, 2</column>
+<column name="write_flag23_0_reg_438">9, 2, 1, 2</column>
+<column name="write_flag29_0_reg_462">9, 2, 1, 2</column>
+<column name="write_flag35_0_reg_510">9, 2, 1, 2</column>
+<column name="write_flag41_0_reg_534">9, 2, 1, 2</column>
+<column name="write_flag48_0_reg_580">9, 2, 1, 2</column>
+<column name="write_flag4_0_reg_568">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln691_reg_2171">5, 0, 5, 0</column>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="icmp_ln878_reg_2112">1, 0, 1, 0</column>
+<column name="iter_V_reg_604">5, 0, 5, 0</column>
+<column name="or_ln414_reg_2201">3, 0, 4, 1</column>
+<column name="p_Result_12_reg_2196">32, 0, 32, 0</column>
+<column name="p_Result_13_reg_2213">32, 0, 32, 0</column>
+<column name="p_Result_14_reg_2218">32, 0, 32, 0</column>
+<column name="p_Val2_1_fu_168">128, 0, 128, 0</column>
+<column name="p_Val2_2_fu_176">128, 0, 128, 0</column>
+<column name="p_Val2_3_fu_188">128, 0, 128, 0</column>
+<column name="p_Val2_4_fu_192">128, 0, 128, 0</column>
+<column name="p_Val2_5_fu_200">128, 0, 128, 0</column>
+<column name="p_Val2_6_fu_212">128, 0, 128, 0</column>
+<column name="p_Val2_7_fu_216">128, 0, 128, 0</column>
+<column name="p_Val2_s_reg_616">256, 0, 256, 0</column>
+<column name="round_tmp2_V_1_reg_2166">32, 0, 32, 0</column>
+<column name="round_tmp_V_reg_2146">32, 0, 32, 0</column>
+<column name="this_111_020_reg_522">128, 0, 128, 0</column>
+<column name="this_113_018_reg_556">128, 0, 128, 0</column>
+<column name="this_11550_016_reg_592">128, 0, 128, 0</column>
+<column name="this_116_0_reg_546">128, 0, 128, 0</column>
+<column name="this_13_024_reg_474">128, 0, 128, 0</column>
+<column name="this_15_029_reg_414">128, 0, 128, 0</column>
+<column name="this_17_026_reg_450">128, 0, 128, 0</column>
+<column name="this_19_023_reg_486">128, 0, 128, 0</column>
+<column name="trunc_ln674_reg_2102">128, 0, 128, 0</column>
+<column name="trunc_ln878_reg_2116">4, 0, 4, 0</column>
+<column name="write_flag11_0_reg_498">1, 0, 1, 0</column>
+<column name="write_flag11_1_reg_2243">1, 0, 1, 0</column>
+<column name="write_flag14_0_fu_204">1, 0, 1, 0</column>
+<column name="write_flag17_0_reg_426">1, 0, 1, 0</column>
+<column name="write_flag17_1_reg_2258">1, 0, 1, 0</column>
+<column name="write_flag20_0_fu_220">1, 0, 1, 0</column>
+<column name="write_flag23_0_reg_438">1, 0, 1, 0</column>
+<column name="write_flag23_1_reg_2253">1, 0, 1, 0</column>
+<column name="write_flag26_0_fu_208">1, 0, 1, 0</column>
+<column name="write_flag29_0_reg_462">1, 0, 1, 0</column>
+<column name="write_flag29_1_reg_2248">1, 0, 1, 0</column>
+<column name="write_flag32_0_fu_196">1, 0, 1, 0</column>
+<column name="write_flag35_0_reg_510">1, 0, 1, 0</column>
+<column name="write_flag35_1_reg_2238">1, 0, 1, 0</column>
+<column name="write_flag38_0_fu_184">1, 0, 1, 0</column>
+<column name="write_flag41_0_reg_534">1, 0, 1, 0</column>
+<column name="write_flag41_1_reg_2233">1, 0, 1, 0</column>
+<column name="write_flag44_0_fu_172">1, 0, 1, 0</column>
+<column name="write_flag48_0_reg_580">1, 0, 1, 0</column>
+<column name="write_flag48_1_reg_2223">1, 0, 1, 0</column>
+<column name="write_flag4_0_reg_568">1, 0, 1, 0</column>
+<column name="write_flag4_1_reg_2228">1, 0, 1, 0</column>
+<column name="write_flag8_0_fu_180">1, 0, 1, 0</column>
+<column name="xor_ln215_1_reg_2156">32, 0, 32, 0</column>
+<column name="xor_ln215_2_reg_2161">32, 0, 32, 0</column>
+<column name="xor_ln215_reg_2151">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_0">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_1">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_2">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_3">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_4">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_5">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_6">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_7">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_8">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_9">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_10">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_11">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_12">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_13">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_14">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="ap_return_15">out, 128, ap_ctrl_hs, updateKey, return value</column>
+<column name="p_read1">in, 128, ap_none, p_read1, scalar</column>
+<column name="p_read2">in, 128, ap_none, p_read2, scalar</column>
+<column name="p_read3">in, 128, ap_none, p_read3, scalar</column>
+<column name="p_read4">in, 128, ap_none, p_read4, scalar</column>
+<column name="p_read5">in, 128, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 128, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 128, ap_none, p_read7, scalar</column>
+<column name="p_read8">in, 128, ap_none, p_read8, scalar</column>
+<column name="p_read9">in, 128, ap_none, p_read9, scalar</column>
+<column name="p_read10">in, 128, ap_none, p_read10, scalar</column>
+<column name="p_read11">in, 128, ap_none, p_read11, scalar</column>
+<column name="p_read12">in, 128, ap_none, p_read12, scalar</column>
+<column name="p_read13">in, 128, ap_none, p_read13, scalar</column>
+<column name="p_read14">in, 128, ap_none, p_read14, scalar</column>
+<column name="p_read15">in, 128, ap_none, p_read15, scalar</column>
+<column name="cipherkey">in, 256, ap_none, cipherkey, scalar</column>
+</table>
+</item>
+</section>
+</profile>

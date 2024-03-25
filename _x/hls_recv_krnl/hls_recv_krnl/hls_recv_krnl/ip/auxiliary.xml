@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="hls_recv_krnl" xd:componentRef="hls_recv_krnl" xd:initiationInterval="x" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(out_time)" xd:originalName="out_time" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataWidth="1" xd:bufferDirection="out"/>
+  <xd:arg xd:name="s_axis_udp_rx.data" xd:originalName="s_axis_udp_rx" xd:direction="in" xd:interfaceRef="s_axis_udp_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx.keep" xd:originalName="s_axis_udp_rx" xd:direction="in" xd:interfaceRef="s_axis_udp_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx.strb" xd:originalName="s_axis_udp_rx" xd:direction="in" xd:interfaceRef="s_axis_udp_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx.last" xd:originalName="s_axis_udp_rx" xd:direction="in" xd:interfaceRef="s_axis_udp_rx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx.data" xd:originalName="m_axis_udp_tx" xd:direction="out" xd:interfaceRef="m_axis_udp_tx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx.keep" xd:originalName="m_axis_udp_tx" xd:direction="out" xd:interfaceRef="m_axis_udp_tx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx.strb" xd:originalName="m_axis_udp_tx" xd:direction="out" xd:interfaceRef="m_axis_udp_tx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx.last" xd:originalName="m_axis_udp_tx" xd:direction="out" xd:interfaceRef="m_axis_udp_tx" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx_meta.data" xd:originalName="s_axis_udp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_udp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx_meta.keep" xd:originalName="s_axis_udp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_udp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx_meta.strb" xd:originalName="s_axis_udp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_udp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_udp_rx_meta.last" xd:originalName="s_axis_udp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_udp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx_meta.data" xd:originalName="m_axis_udp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_udp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx_meta.keep" xd:originalName="m_axis_udp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_udp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx_meta.strb" xd:originalName="m_axis_udp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_udp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_udp_tx_meta.last" xd:originalName="m_axis_udp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_udp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_listen_port.data" xd:originalName="m_axis_tcp_listen_port" xd:direction="out" xd:interfaceRef="m_axis_tcp_listen_port" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_listen_port.keep" xd:originalName="m_axis_tcp_listen_port" xd:direction="out" xd:interfaceRef="m_axis_tcp_listen_port" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_listen_port.strb" xd:originalName="m_axis_tcp_listen_port" xd:direction="out" xd:interfaceRef="m_axis_tcp_listen_port" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_listen_port.last" xd:originalName="m_axis_tcp_listen_port" xd:direction="out" xd:interfaceRef="m_axis_tcp_listen_port" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_port_status.data" xd:originalName="s_axis_tcp_port_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_port_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_port_status.keep" xd:originalName="s_axis_tcp_port_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_port_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_port_status.strb" xd:originalName="s_axis_tcp_port_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_port_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_port_status.last" xd:originalName="s_axis_tcp_port_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_port_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_open_connection.data" xd:originalName="m_axis_tcp_open_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_open_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_open_connection.keep" xd:originalName="m_axis_tcp_open_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_open_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_open_connection.strb" xd:originalName="m_axis_tcp_open_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_open_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_open_connection.last" xd:originalName="m_axis_tcp_open_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_open_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_open_status.data" xd:originalName="s_axis_tcp_open_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_open_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_open_status.keep" xd:originalName="s_axis_tcp_open_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_open_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_open_status.strb" xd:originalName="s_axis_tcp_open_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_open_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_open_status.last" xd:originalName="s_axis_tcp_open_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_open_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_close_connection.data" xd:originalName="m_axis_tcp_close_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_close_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_close_connection.keep" xd:originalName="m_axis_tcp_close_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_close_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_close_connection.strb" xd:originalName="m_axis_tcp_close_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_close_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_close_connection.last" xd:originalName="m_axis_tcp_close_connection" xd:direction="out" xd:interfaceRef="m_axis_tcp_close_connection" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_notification.data" xd:originalName="s_axis_tcp_notification" xd:direction="in" xd:interfaceRef="s_axis_tcp_notification" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_notification.keep" xd:originalName="s_axis_tcp_notification" xd:direction="in" xd:interfaceRef="s_axis_tcp_notification" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_notification.strb" xd:originalName="s_axis_tcp_notification" xd:direction="in" xd:interfaceRef="s_axis_tcp_notification" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_notification.last" xd:originalName="s_axis_tcp_notification" xd:direction="in" xd:interfaceRef="s_axis_tcp_notification" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_read_pkg.data" xd:originalName="m_axis_tcp_read_pkg" xd:direction="out" xd:interfaceRef="m_axis_tcp_read_pkg" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_read_pkg.keep" xd:originalName="m_axis_tcp_read_pkg" xd:direction="out" xd:interfaceRef="m_axis_tcp_read_pkg" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_read_pkg.strb" xd:originalName="m_axis_tcp_read_pkg" xd:direction="out" xd:interfaceRef="m_axis_tcp_read_pkg" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_read_pkg.last" xd:originalName="m_axis_tcp_read_pkg" xd:direction="out" xd:interfaceRef="m_axis_tcp_read_pkg" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_meta.data" xd:originalName="s_axis_tcp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_meta.keep" xd:originalName="s_axis_tcp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_meta.strb" xd:originalName="s_axis_tcp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_meta.last" xd:originalName="s_axis_tcp_rx_meta" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_data.data" xd:originalName="s_axis_tcp_rx_data" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_data.keep" xd:originalName="s_axis_tcp_rx_data" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_data.strb" xd:originalName="s_axis_tcp_rx_data" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_rx_data.last" xd:originalName="s_axis_tcp_rx_data" xd:direction="in" xd:interfaceRef="s_axis_tcp_rx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_meta.data" xd:originalName="m_axis_tcp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_meta.keep" xd:originalName="m_axis_tcp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_meta.strb" xd:originalName="m_axis_tcp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_meta.last" xd:originalName="m_axis_tcp_tx_meta" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_meta" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_data.data" xd:originalName="m_axis_tcp_tx_data" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_data.keep" xd:originalName="m_axis_tcp_tx_data" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_data.strb" xd:originalName="m_axis_tcp_tx_data" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="m_axis_tcp_tx_data.last" xd:originalName="m_axis_tcp_tx_data" xd:direction="out" xd:interfaceRef="m_axis_tcp_tx_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_tx_status.data" xd:originalName="s_axis_tcp_tx_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_tx_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_tx_status.keep" xd:originalName="s_axis_tcp_tx_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_tx_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_tx_status.strb" xd:originalName="s_axis_tcp_tx_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_tx_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s_axis_tcp_tx_status.last" xd:originalName="s_axis_tcp_tx_status" xd:direction="in" xd:interfaceRef="s_axis_tcp_tx_status" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="useConn" xd:originalName="useConn" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="basePort" xd:originalName="basePort" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="delay" xd:originalName="delay" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="expectedRxByteCnt" xd:originalName="expectedRxByteCnt" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_time" xd:originalName="out_time" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="64" xd:offset="0x34" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="237929" xd:FF="51075" xd:BRAM="5" xd:DSP="0"/>
+</xd:acceleratorMap>

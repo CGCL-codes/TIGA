@@ -1,0 +1,166 @@
+
+
+================================================================
+== Vitis HLS Report for 'tie_off_udp'
+================================================================
+* Date:           Sun Dec 11 15:18:34 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|      0 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  10.000 ns|  10.000 ns|    2|    2|     none|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       16|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       65|     -|
+|Register             |        -|      -|        6|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        6|       81|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1_io        |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_io        |       and|   0|  0|   2|           1|           1|
+    |tmp_1_nbreadreq_fu_98_p6  |       and|   0|  0|   2|           1|           0|
+    |tmp_nbreadreq_fu_56_p6    |       and|   0|  0|   2|           1|           0|
+    |ap_block_state1           |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2           |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_io        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3           |        or|   0|  0|   2|           1|           1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  16|           8|           6|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                       |  20|          4|    1|          4|
+    |ap_done                         |   9|          2|    1|          2|
+    |m_axis_udp_tx_TDATA_blk_n       |   9|          2|    1|          2|
+    |m_axis_udp_tx_meta_TDATA_blk_n  |   9|          2|    1|          2|
+    |s_axis_udp_rx_TDATA_blk_n       |   9|          2|    1|          2|
+    |s_axis_udp_rx_meta_TDATA_blk_n  |   9|          2|    1|          2|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           |  65|         14|    6|         14|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------+---+----+-----+-----------+
+    |      Name     | FF| LUT| Bits| Const Bits|
+    +---------------+---+----+-----+-----------+
+    |ap_CS_fsm      |  3|   0|    3|          0|
+    |ap_done_reg    |  1|   0|    1|          0|
+    |tmp_1_reg_204  |  1|   0|    1|          0|
+    |tmp_reg_180    |  1|   0|    1|          0|
+    +---------------+---+----+-----+-----------+
+    |Total          |  6|   0|    6|          0|
+    +---------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-----------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++---------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|                  tie_off_udp|  return value|
+|s_axis_udp_rx_TDATA        |   in|  512|        axis|       s_axis_udp_rx_V_data_V|       pointer|
+|s_axis_udp_rx_TVALID       |   in|    1|        axis|       s_axis_udp_rx_V_last_V|       pointer|
+|s_axis_udp_rx_TREADY       |  out|    1|        axis|       s_axis_udp_rx_V_last_V|       pointer|
+|s_axis_udp_rx_TLAST        |   in|    1|        axis|       s_axis_udp_rx_V_last_V|       pointer|
+|s_axis_udp_rx_TKEEP        |   in|   64|        axis|       s_axis_udp_rx_V_keep_V|       pointer|
+|s_axis_udp_rx_TSTRB        |   in|   64|        axis|       s_axis_udp_rx_V_strb_V|       pointer|
+|m_axis_udp_tx_TDATA        |  out|  512|        axis|       m_axis_udp_tx_V_data_V|       pointer|
+|m_axis_udp_tx_TVALID       |  out|    1|        axis|       m_axis_udp_tx_V_last_V|       pointer|
+|m_axis_udp_tx_TREADY       |   in|    1|        axis|       m_axis_udp_tx_V_last_V|       pointer|
+|m_axis_udp_tx_TLAST        |  out|    1|        axis|       m_axis_udp_tx_V_last_V|       pointer|
+|m_axis_udp_tx_TKEEP        |  out|   64|        axis|       m_axis_udp_tx_V_keep_V|       pointer|
+|m_axis_udp_tx_TSTRB        |  out|   64|        axis|       m_axis_udp_tx_V_strb_V|       pointer|
+|s_axis_udp_rx_meta_TDATA   |   in|  256|        axis|  s_axis_udp_rx_meta_V_data_V|       pointer|
+|s_axis_udp_rx_meta_TVALID  |   in|    1|        axis|  s_axis_udp_rx_meta_V_last_V|       pointer|
+|s_axis_udp_rx_meta_TREADY  |  out|    1|        axis|  s_axis_udp_rx_meta_V_last_V|       pointer|
+|s_axis_udp_rx_meta_TLAST   |   in|    1|        axis|  s_axis_udp_rx_meta_V_last_V|       pointer|
+|s_axis_udp_rx_meta_TKEEP   |   in|   32|        axis|  s_axis_udp_rx_meta_V_keep_V|       pointer|
+|s_axis_udp_rx_meta_TSTRB   |   in|   32|        axis|  s_axis_udp_rx_meta_V_strb_V|       pointer|
+|m_axis_udp_tx_meta_TDATA   |  out|  256|        axis|  m_axis_udp_tx_meta_V_data_V|       pointer|
+|m_axis_udp_tx_meta_TVALID  |  out|    1|        axis|  m_axis_udp_tx_meta_V_last_V|       pointer|
+|m_axis_udp_tx_meta_TREADY  |   in|    1|        axis|  m_axis_udp_tx_meta_V_last_V|       pointer|
+|m_axis_udp_tx_meta_TLAST   |  out|    1|        axis|  m_axis_udp_tx_meta_V_last_V|       pointer|
+|m_axis_udp_tx_meta_TKEEP   |  out|   32|        axis|  m_axis_udp_tx_meta_V_keep_V|       pointer|
+|m_axis_udp_tx_meta_TSTRB   |  out|   32|        axis|  m_axis_udp_tx_meta_V_strb_V|       pointer|
++---------------------------+-----+-----+------------+-----------------------------+--------------+
+

@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_recv_krnl_entry45'
+================================================================
+* Date:           Sun Dec 11 15:17:21 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        hls_recv_krnl
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.818 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        2|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       99|     -|
+|Register             |        -|      -|        3|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        3|      101|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_done                       |   9|          2|    1|          2|
+    |basePort_blk_n                |   9|          2|    1|          2|
+    |basePort_out_blk_n            |   9|          2|    1|          2|
+    |expectedRxByteCnt_blk_n       |   9|          2|    1|          2|
+    |expectedRxByteCnt_out1_blk_n  |   9|          2|    1|          2|
+    |expectedRxByteCnt_out_blk_n   |   9|          2|    1|          2|
+    |out_time_blk_n                |   9|          2|    1|          2|
+    |out_time_out_blk_n            |   9|          2|    1|          2|
+    |real_start                    |   9|          2|    1|          2|
+    |useConn_blk_n                 |   9|          2|    1|          2|
+    |useConn_out_blk_n             |   9|          2|    1|          2|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |  99|         22|   11|         22|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|start_full_n                   |   in|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|start_out                      |  out|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|start_write                    |  out|    1|  ap_ctrl_hs|   hls_recv_krnl.entry45|  return value|
+|useConn_dout                   |   in|   32|     ap_fifo|                 useConn|       pointer|
+|useConn_empty_n                |   in|    1|     ap_fifo|                 useConn|       pointer|
+|useConn_read                   |  out|    1|     ap_fifo|                 useConn|       pointer|
+|basePort_dout                  |   in|   32|     ap_fifo|                basePort|       pointer|
+|basePort_empty_n               |   in|    1|     ap_fifo|                basePort|       pointer|
+|basePort_read                  |  out|    1|     ap_fifo|                basePort|       pointer|
+|expectedRxByteCnt_dout         |   in|   64|     ap_fifo|       expectedRxByteCnt|       pointer|
+|expectedRxByteCnt_empty_n      |   in|    1|     ap_fifo|       expectedRxByteCnt|       pointer|
+|expectedRxByteCnt_read         |  out|    1|     ap_fifo|       expectedRxByteCnt|       pointer|
+|out_time_dout                  |   in|   64|     ap_fifo|                out_time|       pointer|
+|out_time_empty_n               |   in|    1|     ap_fifo|                out_time|       pointer|
+|out_time_read                  |  out|    1|     ap_fifo|                out_time|       pointer|
+|useConn_out_din                |  out|   32|     ap_fifo|             useConn_out|       pointer|
+|useConn_out_full_n             |   in|    1|     ap_fifo|             useConn_out|       pointer|
+|useConn_out_write              |  out|    1|     ap_fifo|             useConn_out|       pointer|
+|basePort_out_din               |  out|   32|     ap_fifo|            basePort_out|       pointer|
+|basePort_out_full_n            |   in|    1|     ap_fifo|            basePort_out|       pointer|
+|basePort_out_write             |  out|    1|     ap_fifo|            basePort_out|       pointer|
+|expectedRxByteCnt_out_din      |  out|   64|     ap_fifo|   expectedRxByteCnt_out|       pointer|
+|expectedRxByteCnt_out_full_n   |   in|    1|     ap_fifo|   expectedRxByteCnt_out|       pointer|
+|expectedRxByteCnt_out_write    |  out|    1|     ap_fifo|   expectedRxByteCnt_out|       pointer|
+|expectedRxByteCnt_out1_din     |  out|   64|     ap_fifo|  expectedRxByteCnt_out1|       pointer|
+|expectedRxByteCnt_out1_full_n  |   in|    1|     ap_fifo|  expectedRxByteCnt_out1|       pointer|
+|expectedRxByteCnt_out1_write   |  out|    1|     ap_fifo|  expectedRxByteCnt_out1|       pointer|
+|out_time_out_din               |  out|   64|     ap_fifo|            out_time_out|       pointer|
+|out_time_out_full_n            |   in|    1|     ap_fifo|            out_time_out|       pointer|
+|out_time_out_write             |  out|    1|     ap_fifo|            out_time_out|       pointer|
++-------------------------------+-----+-----+------------+------------------------+--------------+
+

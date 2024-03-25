@@ -1,0 +1,63 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'hls_recv_krnl'" level="0">
+<item name = "Date">Sun Dec 11 15:17:10 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">hls_recv_krnl</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.650 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mysha_fu_472">mysha, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_myaes_fu_496">myaes, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_tie_off_tcp_tx_fu_517">tie_off_tcp_tx, 2, 2, 10.000 ns, 10.000 ns, 2, 2, none</column>
+<column name="grp_backgroundclock_fu_545">backgroundclock, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_tie_off_udp_fu_554">tie_off_udp, 2, 2, 10.000 ns, 10.000 ns, 2, 2, none</column>
+<column name="grp_partition_fu_590">partition, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_recvData_fu_603">recvData, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_listenPorts_fu_642">listenPorts, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_prepare_sha_fu_664">prepare_sha, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_consumesha_fu_680">consumesha, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_consumeaes_fu_689">consumeaes, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_prepare_aes_fu_696">prepare_aes, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_consumetrans_fu_708">consumetrans, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_tie_off_tcp_open_connection_fu_715">tie_off_tcp_open_connection, 1, 1, 5.000 ns, 5.000 ns, 1, 1, none</column>
+<column name="grp_tie_off_tcp_close_con_fu_735">tie_off_tcp_close_con, 1, 1, 5.000 ns, 5.000 ns, 1, 1, none</column>
+<column name="call_ln329_hls_recv_krnl_entry45_fu_747">hls_recv_krnl_entry45, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln333_hls_recv_krnl_entry3_fu_760">hls_recv_krnl_entry3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln332_Block_split11_proc_fu_776">Block_split11_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
